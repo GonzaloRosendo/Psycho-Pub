@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Plus';
+  src: url(../fonts/PlusJakartaDisplay-Regular.otf);
+}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Plus';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/*Variables*/
+body {
+  background-color: black;
+}
+
+body header {
+  height: 8rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+body header #logoPsychoPub {
+  margin-left: 10%;
+}
+
+body header #logoPsychoPub img {
+  height: 6rem;
+}
+
+body header .menu {
+  margin-right: 10%;
+}
+
+body header .menu li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+body header .menu li a {
+  font-size: 1.7rem;
+  color: #E7FF00;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+body header .menu li a:hover {
+  color: #FF00FF;
+}
+
+body header .menu #social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .menu #social a {
+  margin: 0 1.5rem;
+}
+
+body header .menu #social #instagramHeader {
+  background: url(../logos/Instagram.svg) no-repeat;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+body header .menu #social #twitterHeader {
+  background: url(../logos/Twitter.svg) no-repeat;
+  width: 1.9rem;
+  height: 1.7rem;
+}
+
+body header .hamburger {
+  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin-right: 10%;
+}
+
+body header .hamburger i {
+  background-color: #E7FF00;
+}
+
+body header .hamburger .closeIcon {
+  display: none;
+}
+
+body #intro {
+  background-image: url(../images/Intro.png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 110vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #intro #welcome {
+  width: 60rem;
+  margin-left: 10%;
+}
+
+@media (max-width: 1023px) {
+  body header .menu li a {
+    margin: 0 0.3rem;
+  }
+  body header .menu #social a {
+    margin: 0 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body header #logoPsychoPub img {
+    height: 5rem;
+  }
+  body header .menu {
+    position: fixed;
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    top: 8rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 3rem;
+    margin-right: 0;
+  }
+  body header .menu li a {
+    margin: auto;
+    padding: 2rem 0;
+  }
+  body header .menu #social {
+    margin-top: 15rem;
+  }
+  body header .menu #social #instagramHeader {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  body header .menu #social #twitterHeader {
+    background: url(../logos/Twitter.svg) no-repeat;
+    width: 2.5rem;
+    height: 2.2rem;
+  }
+  body header .hamburger {
+    display: inline;
+  }
+  body header .showMenu {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@media (max-width: 1023px) {
+  body #intro {
+    height: 100vh;
+  }
+  body #intro #welcome {
+    margin: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  body #intro #welcome {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=estilo-index.css.map */

@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'Plus';
+    src: url(../fonts/PlusJakartaDisplay-Regular.otf);
+}
+
+html {font-size: 10px;}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Plus';
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+/*Variables*/
+$green: #E7FF00;
+$pink: #FF00FF;
+$small: 1.7rem;
+$medium: 2.2rem;
+$large: 2.7rem;
+$xlarge: 7rem;
+
+body {
+    background-color: black;
+//------------------------------------------------HEADER------------------------------------------------
+    header {
+        height: 8rem;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+
+        #logoPsychoPub {
+            margin-left: 10%;
+            
+            img {
+                height: 6rem;
+            }
+        }
+        
+        .menu {
+            margin-right: 10%;
+
+            li {
+                display: inline-flex;
+
+                a {
+                    font-size: $small;
+                    color: $green;
+                    text-decoration: none;
+                    margin: 0 1rem;
+                }
+
+                a:hover {
+                    color: $pink;
+                }
+            }
+
+            #social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                a{
+                    margin: 0 1.5rem;
+                }
+    
+                #instagramHeader{
+                    background: url(../logos/Instagram.svg) no-repeat;
+                    width: $small;
+                    height: $small;
+                }
+                
+                #twitterHeader{
+                    background: url(../logos/Twitter.svg) no-repeat;
+                    width: 1.9rem;
+                    height: $small;
+                }
+            }
+        }
+        
+        .hamburger {
+            display: none;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            margin-right: 10%;
+
+            i {
+                background-color: $green;
+            }
+
+            .closeIcon {
+                display: none;
+            }
+        }
+    }
+
+//------------------------------------------------INTRO------------------------------------------------
+    #intro {
+        background-image: url(../images/Intro.png);
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 110vh;
+        display: flex;
+        align-items: center;
+
+        #welcome {
+            width: 60rem;
+            margin-left: 10%;
+        }
+    }
+}
+
+
+
+//------------------------------------------------MEDIA QUERIES------------------------------------------------
+//------------------------------------------------HEADER------------------------------------------------
+@media (max-width: 1023px) {
+    body {
+        header {
+            .menu {
+                li {
+                    a {
+                        margin: 0 0.3rem;
+                    }
+                }
+
+                #social {
+                    a{
+                        margin: 0 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        header {
+
+            #logoPsychoPub {
+                img {
+                    height: 5rem;
+                }
+            }
+
+            .menu {
+                position: fixed;
+                transform: translate(-100%);
+                transition: transform 0.2s;
+                top: 8rem;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 3rem;
+                margin-right: 0;
+
+                li {
+                    a {
+                        margin: auto;
+                        padding: 2rem 0;
+                    }
+                }
+                
+                #social {
+                    margin-top: 15rem;
+
+                    #instagramHeader{
+                        width: $medium;
+                        height: $medium;
+                    }
+                    
+                    #twitterHeader{
+                        background: url(../logos/Twitter.svg) no-repeat;
+                        width: 2.5rem;
+                        height: $medium;
+                    }
+                }
+            }
+
+            .hamburger {
+                display: inline;
+            }
+
+            .showMenu {
+                transform: translate(0);
+            }
+        }
+    }
+}
+
+//------------------------------------------------INTRO------------------------------------------------
+@media (max-width: 1023px) {
+    body{
+        #intro {
+            height: 100vh;
+
+            #welcome {
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body{
+        #intro {
+            #welcome {
+                width: 90%;
+            }
+        }
+    }
+}
+
