@@ -162,7 +162,7 @@ body #intro {
 }
 
 body #intro #welcome {
-  width: 63rem;
+  width: 60rem;
   margin-bottom: 4rem;
 }
 
@@ -198,7 +198,7 @@ body #about {
 
 body #about #border {
   border: 0.2rem solid #B3B3B3;
-  padding: 2% 7%;
+  padding: 3%;
 }
 
 body #about #border #titleAbout {
@@ -214,14 +214,17 @@ body #about #border #structureAbout {
   display: grid;
   -ms-grid-columns: 48% 48%;
       grid-template-columns: 48% 48%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 6rem;
 }
 
-body #about #border #structureAbout #images {
-  background-color: #FF00FF;
-  background-size: cover;
+body #about #border #structureAbout #images img {
+  float: right;
+  width: 85%;
 }
 
 body #about #border #structureAbout #textAbout {
@@ -237,6 +240,7 @@ body #about #border #structureAbout #textAbout h3 {
 
 body #about #border #structureAbout #textAbout p {
   text-align: justify;
+  width: 80%;
 }
 
 body #about #border #structureAbout #textAbout p span {
@@ -319,6 +323,7 @@ body #about #border #structureAbout #textAbout p span {
     height: 100vh;
   }
   body #intro #welcome {
+    width: 60%;
     margin-bottom: 3rem;
   }
 }
@@ -329,6 +334,42 @@ body #about #border #structureAbout #textAbout p span {
   }
   body #intro #typeText {
     font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  body #about #border #structureAbout #textAbout h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body #about #border {
+    padding: 5%;
+  }
+  body #about #border #structureAbout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+  body #about #border #structureAbout #images img {
+    width: 100%;
+  }
+  body #about #border #structureAbout #textAbout {
+    text-align: center;
+  }
+  body #about #border #structureAbout #textAbout p {
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 5rem;
   }
 }
 /*# sourceMappingURL=estilo-index.css.map */

@@ -27,7 +27,7 @@ hamburger.addEventListener("click", toggleMenu);
 var _CONTENT = [ 
 	"Cocktail", 
 	"Cryptoart",
-  	"NFT", 
+  	"NFTs", 
 ];
 
 // Current sentence being processed

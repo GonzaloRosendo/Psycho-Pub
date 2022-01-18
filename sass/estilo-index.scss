@@ -147,7 +147,7 @@ body {
         padding-left: 10%;
 
         #welcome {
-            width: 63rem;
+            width: 60rem;
             margin-bottom: 4rem;
         }
 
@@ -180,7 +180,7 @@ body {
 
         #border {
             border: 0.2rem solid $grey;
-            padding: 2% 7%;
+            padding: 3%;
 
             #titleAbout {
                 font-family: "Plus";
@@ -193,17 +193,21 @@ body {
             #structureAbout {
                 display: grid;
                 grid-template-columns: 48% 48%;
-                justify-content: space-between;
+                column-gap: 5%;
+                justify-content: center;
+                margin-bottom: 6rem;
 
                 #images {
-                    background-color: #FF00FF;
-                    background-size: cover;
+                    img {
+                        float: right;
+                        width: 85%;
+                    }
                 }
 
                 #textAbout {
                     color: $grey;
                     font-size: $small;
-
+                    
                     h3 {
                         color: $green;
                         font-size: $xlarge;
@@ -212,6 +216,7 @@ body {
 
                     p{
                         text-align: justify;
+                        width: 80%;
                         span{
                             color: $green;
                         }
@@ -323,6 +328,7 @@ body {
             height: 100vh;
 
             #welcome {
+                width: 60%;
                 margin-bottom: 3rem;
             }
         }
@@ -338,6 +344,56 @@ body {
 
             #typeText {
                 font-size: $small;
+            }
+        }
+    }
+}
+
+//------------------------------------------------MEDIA QUERIES: INTRO------------------------------------------------
+@media (max-width: 1023px) {
+    body{
+        #about {
+            #border {
+                #structureAbout {
+                    #textAbout {
+                        h3 {
+                            font-size: $large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body{
+        #about {
+            #border {
+                padding: 5%;
+
+                #structureAbout {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    margin-bottom: 0;
+
+                    #images {
+                        img{
+                            width: 100%;
+                        }
+                    }
+
+                    #textAbout {
+                        text-align: center;
+                        
+                        p{
+                            text-align: justify;
+                            width: 100%;
+                            margin-bottom: 5rem;
+                        }
+                    }
+                }
             }
         }
     }
