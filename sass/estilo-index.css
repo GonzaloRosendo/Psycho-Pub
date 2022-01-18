@@ -104,7 +104,7 @@ body header .menu #social #instagramHeader #instagramHover {
 }
 
 body header .menu #social #instagramHeader:hover #instagramHover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 body header .menu #social #twitterHeader {
@@ -121,7 +121,7 @@ body header .menu #social #twitterHeader #twitterHover {
 }
 
 body header .menu #social #twitterHeader:hover #twitterHover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 body header .hamburger {
@@ -206,45 +206,56 @@ body #about #border #titleAbout {
   color: #333333;
   font-size: 2.4rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
-body #about #border #structureAbout {
+body #about #border .structureAbout {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 48% 48%;
-      grid-template-columns: 48% 48%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   -webkit-column-gap: 5%;
           column-gap: 5%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 6rem;
+  opacity: 0;
+  -webkit-transform: translateY(14rem);
+          transform: translateY(14rem);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
-body #about #border #structureAbout #images img {
+body #about #border .structureAbout #images img {
   float: right;
   width: 85%;
 }
 
-body #about #border #structureAbout #textAbout {
+body #about #border .structureAbout #textAbout {
   color: #B3B3B3;
   font-size: 1.7rem;
 }
 
-body #about #border #structureAbout #textAbout h3 {
+body #about #border .structureAbout #textAbout h3 {
   color: #E7FF00;
   font-size: 6rem;
   margin-bottom: 3rem;
 }
 
-body #about #border #structureAbout #textAbout p {
+body #about #border .structureAbout #textAbout p {
   text-align: justify;
   width: 80%;
 }
 
-body #about #border #structureAbout #textAbout p span {
+body #about #border .structureAbout #textAbout p span {
   color: #E7FF00;
+}
+
+body #about #border .structureAboutOn {
+  opacity: 1;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
 }
 
 @media (max-width: 1023px) {
@@ -300,8 +311,15 @@ body #about #border #structureAbout #textAbout p span {
     width: 2.4rem;
     height: 2.4rem;
   }
+  body header .menu #social #instagramHeader #instagramHover {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
   body header .menu #social #twitterHeader {
-    background: url(../logos/Twitter.svg) no-repeat;
+    width: 2.5rem;
+    height: 2.4rem;
+  }
+  body header .menu #social #twitterHeader #twitterHover {
     width: 2.5rem;
     height: 2.4rem;
   }

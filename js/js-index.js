@@ -26,7 +26,7 @@ hamburger.addEventListener("click", toggleMenu);
 // List of sentences
 var _CONTENT = [ 
 	"Cocktail", 
-	"Cryptoart",
+	"Crypto art",
   	"NFTs", 
 ];
 
@@ -94,3 +94,16 @@ function Delete() {
 // Start the typing effect on load
 _INTERVAL_VAL = setInterval(Type, 100);
 
+//--------------------------------------------------SCROLL APPEAR-------------------------------------------------- 
+function scrollAppear() {
+	var structureAbout = document.querySelector('.structureAbout');
+	var aboutPosition = structureAbout.getBoundingClientRect().top;
+	var screenPosition = window.innerHeight;
+	
+	
+	if (aboutPosition < screenPosition){
+		structureAbout.classList.add("structureAboutOn");
+	}
+}
+
+window.addEventListener('scroll', scrollAppear);

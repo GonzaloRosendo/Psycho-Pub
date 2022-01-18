@@ -92,7 +92,7 @@ body {
 
                 #instagramHeader:hover {
                     #instagramHover {
-                        opacity: 100%;
+                        opacity: 1;
                     }
                 }
                 
@@ -111,7 +111,7 @@ body {
 
                 #twitterHeader:hover {
                     #twitterHover {
-                        opacity: 100%;
+                        opacity: 1;
                     }
                 }
             }
@@ -187,15 +187,18 @@ body {
                 color: $darkgrey;
                 font-size: $medium;
                 text-align: center;
-                margin-bottom: 3rem;
+                margin-bottom: 4rem;
             }
             
-            #structureAbout {
+            .structureAbout {
                 display: grid;
-                grid-template-columns: 48% 48%;
+                grid-template-columns: 50% 50%;
                 column-gap: 5%;
                 justify-content: center;
                 margin-bottom: 6rem;
+                opacity: 0;
+                transform: translateY(14rem);
+                transition: 0.5s all ease-in-out;
 
                 #images {
                     img {
@@ -223,6 +226,12 @@ body {
                     }
                 }
             }
+
+            .structureAboutOn {
+                opacity: 1;
+                transform: translateY(0rem);
+            }
+            
         }
     }
 }
@@ -298,12 +307,21 @@ body {
                     #instagramHeader{
                         width: $medium;
                         height: $medium;
+
+                        #instagramHover {
+                            width: $medium;
+                            height: $medium;
+                        }
                     }
                     
                     #twitterHeader{
-                        background: url(../logos/Twitter.svg) no-repeat;
                         width: 2.5rem;
                         height: $medium;
+
+                        #twitterHover {
+                            width: 2.5rem;
+                        height: $medium;
+                        }
                     }
                 }
             }
@@ -349,7 +367,7 @@ body {
     }
 }
 
-//------------------------------------------------MEDIA QUERIES: INTRO------------------------------------------------
+//------------------------------------------------MEDIA QUERIES: ABOUT------------------------------------------------
 @media (max-width: 1023px) {
     body{
         #about {
