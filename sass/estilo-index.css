@@ -356,7 +356,7 @@ body #about #border .structureAboutOn {
 }
 
 @media (max-width: 1023px) {
-  body #about #border #structureAbout #textAbout h3 {
+  body #about #border .structureAbout #textAbout h3 {
     font-size: 3rem;
   }
 }
@@ -365,7 +365,7 @@ body #about #border .structureAboutOn {
   body #about #border {
     padding: 5%;
   }
-  body #about #border #structureAbout {
+  body #about #border .structureAbout {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -378,13 +378,13 @@ body #about #border .structureAboutOn {
             align-items: center;
     margin-bottom: 0;
   }
-  body #about #border #structureAbout #images img {
+  body #about #border .structureAbout #images img {
     width: 100%;
   }
-  body #about #border #structureAbout #textAbout {
+  body #about #border .structureAbout #textAbout {
     text-align: center;
   }
-  body #about #border #structureAbout #textAbout p {
+  body #about #border .structureAbout #textAbout p {
     text-align: justify;
     width: 100%;
     margin-bottom: 5rem;
