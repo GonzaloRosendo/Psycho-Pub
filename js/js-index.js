@@ -1,3 +1,26 @@
+//-------------------------------------------------- SHOW WHEN LOADED-------------------------------------------------- 
+var obj_contain = document.getElementById('contain');
+var obj_loadingMessage = document.getElementById('loadingMessage'); 
+function loading()
+{
+    var images = document.images;
+    for (var i = 0; i<images.length; i++) {
+        var image = images[i];
+        if (image.complete) {
+            if ((i+1)==images.length) {
+                obj_loadingMessage.style.display = 'none';
+                obj_contain.style.display = 'block';
+            }
+        } else {
+            setTimeout(loading, 30);
+            return false;
+        }
+    }
+}
+obj_contain.style.display = 'none';
+obj_loadingMessage.style.display = 'block';
+loading();
+
 //-------------------------------------------------- HAMBURGER MENU-------------------------------------------------- 
 
 const menu = document.querySelector(".menu");
@@ -102,15 +125,74 @@ _INTERVAL_VAL = setInterval(Type, 100);
 
 //--------------------------------------------------SCROLL APPEAR-------------------------------------------------- 
 function scrollAppear() {
-	var structureAbout = document.querySelector('.structureAbout');
-	var aboutPosition = structureAbout.getBoundingClientRect().top;
-	var screenPosition = window.innerHeight;
+	var border = document.querySelector('.border');
+	var borderPosition = border.getBoundingClientRect().top;
+	var screenPosition = window.innerHeight / 1.35;
 
-
-	if (aboutPosition < screenPosition) {
-		structureAbout.classList.add("structureAboutOn");
-		console.log ("scroledddd")
+	if (borderPosition < screenPosition) {
+		border.classList.add("borderOn");
 	}
 }
 
 window.addEventListener('scroll', scrollAppear);
+
+//--------------------------------------------------TABLA MENU-------------------------------------------------- 
+
+var MenuSeries = document.querySelector("#menu");
+
+function createSerie(x){
+	var serie = document.createElement ("div");
+	serie.classList.add("serie");
+	serie.innerHTML = `
+							<div class="titlePrice">
+								<h4>${x.name}</h4>
+								<span>${x.price}</span>
+							</div>
+
+							<div class="container">
+								<div class="box">
+									<img src="${x.item1}" alt="${x.id}">
+									<a href="${x.link1}">
+										<p>Buy on Rarible</p>
+									</a>
+									<p>${x.id1}</p>
+								</div>
+
+								<div class="box">
+									<img src="${x.item2}" alt="${x.id2}">
+									<a href="${x.link2}">
+										<p>Buy on Rarible</p>
+									</a>
+									<p>${x.id2}</p>
+								</div>
+
+								<div class="box">
+									<img src="${x.item3}" alt="${x.id3}">
+									<a href="${x.link3}">
+										<p>Buy on Rarible</p>
+									</a>
+									<p>${x.id3}</p>
+								</div>
+								
+								<div class="box">
+									<img src="${x.item4}" alt="${x.id4}">
+									<a href="${x.link4}">
+										<p>Buy on Rarible</p>
+									</a>
+									<p>${x.id4}</p>
+								</div>
+								
+								<div class="box">
+									<img src="${x.item5}" alt="${x.id5}">
+									<a href="${x.link5}">
+										<p>Buy on Rarible</p>
+									</a>
+									<p>${x.id5}</p>
+								</div>
+							</div>`;
+	MenuSeries.appendChild(serie);
+}
+
+for (let i = 0 ; i < series.length ; i++) {
+	createSerie(series[i]);
+}

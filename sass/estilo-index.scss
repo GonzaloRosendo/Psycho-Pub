@@ -16,17 +16,17 @@ html {font-size: 10px;}
     font-family: 'Plus';
     box-sizing: border-box;
     transition: all 0.2s;
+    scroll-behavior: smooth;
 }
 
 /*Variables*/
 $green: #E7FF00;
 $pink: #FF00FF; 
-$darkgrey: #333333;
-$grey: #B3B3B3;
 $small: 1.7rem;
 $medium: 2.4rem;
 $large: 3rem;
-$xlarge: 6rem;
+$xlarge: 5rem;
+$xxlarge: 10rem;
 
 body {
     background-color: black;
@@ -176,15 +176,21 @@ body {
 
 //------------------------------------------------ABOUT------------------------------------------------
     #about {
-        padding: 3%;
+        padding: 10rem 3% 0 3%;
+        background-image: url(../images/AboutHor.png);
+        background-position: center;
+        background-size: 100% 100%;
 
-        #border {
-            border: 0.2rem solid $grey;
+        .border {
+            border: 0.2rem solid grey;
             padding: 3%;
+            opacity: 0;
+            transform: translateY(14rem);
+            transition: 0.5s all ease-in-out;
 
             #titleAbout {
                 font-family: "Plus";
-                color: $darkgrey;
+                color: grey;
                 font-size: $medium;
                 text-align: center;
                 margin-bottom: 4rem;
@@ -196,24 +202,21 @@ body {
                 column-gap: 5%;
                 justify-content: center;
                 margin-bottom: 6rem;
-                opacity: 0;
-                transform: translateY(14rem);
-                transition: 0.5s all ease-in-out;
 
-                #images {
-                    img {
+                .videos {
+                    video {
                         float: right;
-                        width: 85%;
+                        width: 80%;
                     }
                 }
 
-                #textAbout {
-                    color: $grey;
+                .textAbout {
+                    color: white;
                     font-size: $small;
                     
                     h3 {
                         color: $green;
-                        font-size: $xlarge;
+                        font-size: $xxlarge;
                         margin-bottom: 3rem;
                     }
 
@@ -226,18 +229,131 @@ body {
                     }
                 }
             }
+        }
 
-            .structureAboutOn {
-                opacity: 1;
-                transform: translateY(0rem);
-            }
-            
+        .borderOn {
+            opacity: 1;
+            transform: translateY(0rem);
         }
     }
 }
 
+//------------------------------------------------MENU------------------------------------------------
+#menu {
+    padding-top: 10rem;
 
+    #titleMenu {
+    overflow: hidden;
+    width: 100;
 
+        h2 {
+            animation: MoveSides 30s linear infinite;
+            color: grey;
+            font-size: $medium;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-family: "Barista";
+        font-size: $xxlarge;
+        font-weight: normal;
+        color: #E7FF00;
+    }
+
+    #subtitleMenu{
+        text-align: center;
+        color: white;
+        font-size: $small;
+        margin-bottom: 6rem;
+    }
+
+    .serie {
+        margin:0 10% 4rem 10%;
+
+        .titlePrice {
+            display: flex;
+            flex-direction: row;
+            color: #E7FF00;
+            font-size: $xlarge;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+
+            h4 {
+                font-weight: normal;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                img {
+                    width: 22rem;
+                    height: 22rem;
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    position: absolute;
+                    width: 18rem;
+                    height: 6rem;
+                    top: 8rem;
+                    left: 2rem;
+                    text-decoration: none;
+                    border: 2px solid $green;   
+                    border-radius: 10rem; 
+                    width: 18rem;
+                    height: 6rem;
+                    text-align: center;
+                    opacity: 0;
+                    justify-content: center;
+
+                    p{
+                        font-size: $small;
+                        color: $green;
+                        height: 6rem;
+                        line-height: 5.5rem;
+                    }
+                }
+
+                p{
+                    color: white;
+                    font-size: $medium
+                    
+                }
+            }
+
+            .box:hover {
+                img {
+                    opacity: 0.3;
+                    transform: scale(1.05);
+                }
+
+                a {
+                    opacity: 1;
+                }
+            }
+        }   
+    }
+}
+
+@keyframes MoveSides {
+    0%, 100% {
+      transform: translatex(0);
+    }
+    50% {
+      transform: translatex(-1000px);
+    }
+  }
 
 
 
@@ -245,7 +361,7 @@ body {
 
 //------------------------------------------------MEDIA QUERIES------------------------------------------------
 //------------------------------------------------MEDIA QUERIES: HEADER------------------------------------------------
-@media (max-width: 1023px) {
+@media (max-width: 1025px) {
     body {
         header {
             .menu {
@@ -338,7 +454,7 @@ body {
 }
 
 //------------------------------------------------MEDIA QUERIES: INTRO------------------------------------------------
-@media (max-width: 1023px) {
+@media (max-width: 1025px) {
     body{
         #intro {
             align-items: center;
@@ -368,12 +484,13 @@ body {
 }
 
 //------------------------------------------------MEDIA QUERIES: ABOUT------------------------------------------------
-@media (max-width: 1023px) {
+@media (max-width: 1025px) {
     body{
         #about {
-            #border {
+            padding: 10% 3% 0 3%;
+            .border {
                 .structureAbout {
-                    #textAbout {
+                    .textAbout {
                         h3 {
                             font-size: $large;
                         }
@@ -387,7 +504,9 @@ body {
 @media (max-width: 767px) {
     body{
         #about {
-            #border {
+            background-image: url(../images/AboutVer.png);
+
+            .border {
                 padding: 5%;
 
                 .structureAbout {
@@ -396,13 +515,13 @@ body {
                     align-items: center;
                     margin-bottom: 0;
 
-                    #images {
-                        img{
+                    .videos {
+                        video{
                             width: 100%;
                         }
                     }
 
-                    #textAbout {
+                    .textAbout {
                         text-align: center;
                         
                         p{

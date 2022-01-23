@@ -20,6 +20,7 @@ html {
           box-sizing: border-box;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  scroll-behavior: smooth;
 }
 
 /*Variables*/
@@ -193,23 +194,31 @@ body #intro #typeText #container #text {
 }
 
 body #about {
-  padding: 3%;
+  padding: 10rem 3% 0 3%;
+  background-image: url(../images/AboutHor.png);
+  background-position: center;
+  background-size: 100% 100%;
 }
 
-body #about #border {
-  border: 0.2rem solid #B3B3B3;
+body #about .border {
+  border: 0.2rem solid grey;
   padding: 3%;
+  opacity: 0;
+  -webkit-transform: translateY(14rem);
+          transform: translateY(14rem);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
-body #about #border #titleAbout {
+body #about .border #titleAbout {
   font-family: "Plus";
-  color: #333333;
+  color: grey;
   font-size: 2.4rem;
   text-align: center;
   margin-bottom: 4rem;
 }
 
-body #about #border .structureAbout {
+body #about .border .structureAbout {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -220,45 +229,189 @@ body #about #border .structureAbout {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 6rem;
-  opacity: 0;
-  -webkit-transform: translateY(14rem);
-          transform: translateY(14rem);
-  -webkit-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
 }
 
-body #about #border .structureAbout #images img {
+body #about .border .structureAbout .videos video {
   float: right;
-  width: 85%;
+  width: 80%;
 }
 
-body #about #border .structureAbout #textAbout {
-  color: #B3B3B3;
+body #about .border .structureAbout .textAbout {
+  color: white;
   font-size: 1.7rem;
 }
 
-body #about #border .structureAbout #textAbout h3 {
+body #about .border .structureAbout .textAbout h3 {
   color: #E7FF00;
-  font-size: 6rem;
+  font-size: 10rem;
   margin-bottom: 3rem;
 }
 
-body #about #border .structureAbout #textAbout p {
+body #about .border .structureAbout .textAbout p {
   text-align: justify;
   width: 80%;
 }
 
-body #about #border .structureAbout #textAbout p span {
+body #about .border .structureAbout .textAbout p span {
   color: #E7FF00;
 }
 
-body #about #border .structureAboutOn {
+body #about .borderOn {
   opacity: 1;
   -webkit-transform: translateY(0rem);
           transform: translateY(0rem);
 }
 
-@media (max-width: 1023px) {
+#menu {
+  padding-top: 10rem;
+}
+
+#menu #titleMenu {
+  overflow: hidden;
+  width: 100;
+}
+
+#menu #titleMenu h2 {
+  -webkit-animation: MoveSides 30s linear infinite;
+          animation: MoveSides 30s linear infinite;
+  color: grey;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#menu h3 {
+  text-align: center;
+  font-family: "Barista";
+  font-size: 10rem;
+  font-weight: normal;
+  color: #E7FF00;
+}
+
+#menu #subtitleMenu {
+  text-align: center;
+  color: white;
+  font-size: 1.7rem;
+  margin-bottom: 6rem;
+}
+
+#menu .serie {
+  margin: 0 10% 4rem 10%;
+}
+
+#menu .serie .titlePrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #E7FF00;
+  font-size: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+#menu .serie .titlePrice h4 {
+  font-weight: normal;
+}
+
+#menu .serie .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#menu .serie .container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+#menu .serie .container .box img {
+  width: 22rem;
+  height: 22rem;
+  margin-bottom: 1rem;
+}
+
+#menu .serie .container .box a {
+  position: absolute;
+  width: 18rem;
+  height: 6rem;
+  top: 8rem;
+  left: 2rem;
+  text-decoration: none;
+  border: 2px solid #E7FF00;
+  border-radius: 10rem;
+  width: 18rem;
+  height: 6rem;
+  text-align: center;
+  opacity: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#menu .serie .container .box a p {
+  font-size: 1.7rem;
+  color: #E7FF00;
+  height: 6rem;
+  line-height: 5.5rem;
+}
+
+#menu .serie .container .box p {
+  color: white;
+  font-size: 2.4rem;
+}
+
+#menu .serie .container .box:hover img {
+  opacity: 0.3;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#menu .serie .container .box:hover a {
+  opacity: 1;
+}
+
+@-webkit-keyframes MoveSides {
+  0%, 100% {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+  }
+  50% {
+    -webkit-transform: translatex(-1000px);
+            transform: translatex(-1000px);
+  }
+}
+
+@keyframes MoveSides {
+  0%, 100% {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+  }
+  50% {
+    -webkit-transform: translatex(-1000px);
+            transform: translatex(-1000px);
+  }
+}
+
+@media (max-width: 1025px) {
   body header .menu li a {
     margin: 0 0.3rem;
   }
@@ -332,7 +485,7 @@ body #about #border .structureAboutOn {
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1025px) {
   body #intro {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -355,17 +508,23 @@ body #about #border .structureAboutOn {
   }
 }
 
-@media (max-width: 1023px) {
-  body #about #border .structureAbout #textAbout h3 {
+@media (max-width: 1025px) {
+  body #about {
+    padding: 10% 3% 0 3%;
+  }
+  body #about .border .structureAbout .textAbout h3 {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 767px) {
-  body #about #border {
+  body #about {
+    background-image: url(../images/AboutVer.png);
+  }
+  body #about .border {
     padding: 5%;
   }
-  body #about #border .structureAbout {
+  body #about .border .structureAbout {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -378,13 +537,13 @@ body #about #border .structureAboutOn {
             align-items: center;
     margin-bottom: 0;
   }
-  body #about #border .structureAbout #images img {
+  body #about .border .structureAbout .videos video {
     width: 100%;
   }
-  body #about #border .structureAbout #textAbout {
+  body #about .border .structureAbout .textAbout {
     text-align: center;
   }
-  body #about #border .structureAbout #textAbout p {
+  body #about .border .structureAbout .textAbout p {
     text-align: justify;
     width: 100%;
     margin-bottom: 5rem;
