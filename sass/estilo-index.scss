@@ -271,7 +271,7 @@ body {
     }
 
     .serie {
-        margin:0 10% 4rem 10%;
+        margin:0 10% 8rem 10%;
 
         .titlePrice {
             display: flex;
@@ -279,7 +279,7 @@ body {
             color: #E7FF00;
             font-size: $xlarge;
             justify-content: space-between;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
 
             h4 {
                 font-weight: normal;
@@ -311,8 +311,6 @@ body {
                     text-decoration: none;
                     border: 2px solid $green;   
                     border-radius: 10rem; 
-                    width: 18rem;
-                    height: 6rem;
                     text-align: center;
                     opacity: 0;
                     justify-content: center;
@@ -381,10 +379,9 @@ body {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     body {
         header {
-
             #logoPsychoPub {
                 img {
                     height: 5rem;
@@ -465,11 +462,15 @@ body {
                 width: 60%;
                 margin-bottom: 3rem;
             }
+
+            #typeText {
+                font-size: $medium;
+            }
         }
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     body{
         #intro {
             #welcome {
@@ -484,6 +485,22 @@ body {
 }
 
 //------------------------------------------------MEDIA QUERIES: ABOUT------------------------------------------------
+@media (max-width: 1200px) {
+    body{
+        #about {
+            .border {
+                .structureAbout {
+                    .textAbout {
+                        h3 {
+                            font-size: $xlarge;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1025px) {
     body{
         #about {
@@ -501,13 +518,18 @@ body {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     body{
         #about {
             background-image: url(../images/AboutVer.png);
+            padding-top: 20%;
 
             .border {
                 padding: 5%;
+
+                #titleAbout {
+                    margin-bottom: 2rem;
+                }
 
                 .structureAbout {
                     display: flex;
@@ -532,6 +554,150 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+
+
+//------------------------------------------------MEDIA QUERIES: MENU------------------------------------------------
+
+@media (max-width: 1200px) {
+    #menu {  
+        h3 {
+            font-size: $xxlarge - 2rem;
+        }
+
+        .serie {
+            margin:0 10% 5rem 10%;
+    
+            .titlePrice {
+                font-size: $large;
+            }
+    
+            .container {
+                .box {
+                    img {
+                        width: 16rem;
+                        height: 16rem;
+                    }
+
+                    a {
+                        width: 15rem;
+                        height: 5rem;
+                        top: 5.5rem;
+                        left: 0.5rem;
+    
+                        p{
+                            height: 5rem;
+                            line-height: 4.5rem;
+                        }
+                    }
+
+                    p{
+                        font-size: $small;
+                        
+                    }
+                }
+            }   
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    #menu {
+        padding-top: 10%;    
+
+        h3 {
+            font-size: $xlarge;
+        }
+
+        .serie {
+            margin:0 10% 2rem 10%;
+
+            .container {
+                .box {
+                    img {
+                        width: 12rem;
+                        height: 12rem;
+                    }
+
+                    a {
+                        width: 12rem;
+                        height: 4rem;
+                        top: 4rem;
+                        left: 0rem;
+    
+                        p{
+                            font-size: $small - 0.5rem;
+                            height: 4rem;
+                            line-height: 3.5rem;
+                        }
+                    }
+
+                    p{
+                        font-size: $small;
+                        
+                    }
+                }
+            }   
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    #menu {    
+        padding-top: 20%;
+        
+        h3 {
+            font-size: $large;
+        }
+
+        #subtitleMenu{
+            font-size: $small;
+            margin: 0 10%;
+            margin-bottom: 4rem;
+        }
+
+        .serie {
+            margin:0 10% 1rem 10%;
+            justify-content: space-between;
+
+            .titlePrice {
+                font-size: $small + 0.2rem;
+            }
+
+            .container {
+                display: inline-block;
+                
+                .box {
+                    display: inline-block;
+                    margin-right: 0.2rem;
+
+                    img {
+                        width: 14rem;
+                        height: 14rem;
+                        margin-bottom: 0rem;
+                    }
+
+                    a {
+                        width: 11rem;
+                        height: 4rem;
+                        top: 5rem;
+                        left: 1.5rem;
+    
+                        p{
+                            font-size: $small - 0.5rem;
+                            height: 4rem;
+                            line-height: 3.5rem;
+                        }
+                    }
+
+                    p{
+                        font-size: $small;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }   
         }
     }
 }

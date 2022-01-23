@@ -296,7 +296,7 @@ body #about .borderOn {
 }
 
 #menu .serie {
-  margin: 0 10% 4rem 10%;
+  margin: 0 10% 8rem 10%;
 }
 
 #menu .serie .titlePrice {
@@ -312,7 +312,7 @@ body #about .borderOn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 #menu .serie .titlePrice h4 {
@@ -358,8 +358,6 @@ body #about .borderOn {
   text-decoration: none;
   border: 2px solid #E7FF00;
   border-radius: 10rem;
-  width: 18rem;
-  height: 6rem;
   text-align: center;
   opacity: 0;
   -webkit-box-pack: center;
@@ -420,7 +418,7 @@ body #about .borderOn {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   body header #logoPsychoPub img {
     height: 5rem;
   }
@@ -497,14 +495,23 @@ body #about .borderOn {
     width: 60%;
     margin-bottom: 3rem;
   }
+  body #intro #typeText {
+    font-size: 2.4rem;
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   body #intro #welcome {
     width: 90%;
   }
   body #intro #typeText {
     font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  body #about .border .structureAbout .textAbout h3 {
+    font-size: 5rem;
   }
 }
 
@@ -517,12 +524,16 @@ body #about .borderOn {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   body #about {
     background-image: url(../images/AboutVer.png);
+    padding-top: 20%;
   }
   body #about .border {
     padding: 5%;
+  }
+  body #about .border #titleAbout {
+    margin-bottom: 2rem;
   }
   body #about .border .structureAbout {
     display: -webkit-box;
@@ -547,6 +558,115 @@ body #about .borderOn {
     text-align: justify;
     width: 100%;
     margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  #menu h3 {
+    font-size: 8rem;
+  }
+  #menu .serie {
+    margin: 0 10% 5rem 10%;
+  }
+  #menu .serie .titlePrice {
+    font-size: 3rem;
+  }
+  #menu .serie .container .box img {
+    width: 16rem;
+    height: 16rem;
+  }
+  #menu .serie .container .box a {
+    width: 15rem;
+    height: 5rem;
+    top: 5.5rem;
+    left: 0.5rem;
+  }
+  #menu .serie .container .box a p {
+    height: 5rem;
+    line-height: 4.5rem;
+  }
+  #menu .serie .container .box p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  #menu {
+    padding-top: 10%;
+  }
+  #menu h3 {
+    font-size: 5rem;
+  }
+  #menu .serie {
+    margin: 0 10% 2rem 10%;
+  }
+  #menu .serie .container .box img {
+    width: 12rem;
+    height: 12rem;
+  }
+  #menu .serie .container .box a {
+    width: 12rem;
+    height: 4rem;
+    top: 4rem;
+    left: 0rem;
+  }
+  #menu .serie .container .box a p {
+    font-size: 1.2rem;
+    height: 4rem;
+    line-height: 3.5rem;
+  }
+  #menu .serie .container .box p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 769px) {
+  #menu {
+    padding-top: 20%;
+  }
+  #menu h3 {
+    font-size: 3rem;
+  }
+  #menu #subtitleMenu {
+    font-size: 1.7rem;
+    margin: 0 10%;
+    margin-bottom: 4rem;
+  }
+  #menu .serie {
+    margin: 0 10% 1rem 10%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #menu .serie .titlePrice {
+    font-size: 1.9rem;
+  }
+  #menu .serie .container {
+    display: inline-block;
+  }
+  #menu .serie .container .box {
+    display: inline-block;
+    margin-right: 0.2rem;
+  }
+  #menu .serie .container .box img {
+    width: 14rem;
+    height: 14rem;
+    margin-bottom: 0rem;
+  }
+  #menu .serie .container .box a {
+    width: 11rem;
+    height: 4rem;
+    top: 5rem;
+    left: 1.5rem;
+  }
+  #menu .serie .container .box a p {
+    font-size: 1.2rem;
+    height: 4rem;
+    line-height: 3.5rem;
+  }
+  #menu .serie .container .box p {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
   }
 }
 /*# sourceMappingURL=estilo-index.css.map */
