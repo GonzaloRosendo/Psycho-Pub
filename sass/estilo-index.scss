@@ -647,7 +647,7 @@ body {
 @media (max-width: 769px) {
     #menu {    
         padding-top: 20%;
-        
+
         h3 {
             font-size: $large;
         }
@@ -660,30 +660,30 @@ body {
 
         .serie {
             margin:0 10% 1rem 10%;
-            justify-content: space-between;
 
             .titlePrice {
-                font-size: $small + 0.2rem;
+                font-size: $small + 0.3rem;
             }
 
             .container {
                 display: inline-block;
-                
+
                 .box {
                     display: inline-block;
-                    margin-right: 0.2rem;
+                    border: 1px solid grey;
+                    margin-bottom: 2rem;
 
                     img {
-                        width: 14rem;
-                        height: 14rem;
+                        width: 14.5rem;
+                        height: 14.5rem;
                         margin-bottom: 0rem;
                     }
 
                     a {
                         width: 11rem;
                         height: 4rem;
-                        top: 5rem;
-                        left: 1.5rem;
+                        top: 5.25rem;
+                        left: 1.75rem;
     
                         p{
                             font-size: $small - 0.5rem;
@@ -694,7 +694,6 @@ body {
 
                     p{
                         font-size: $small;
-                        margin-bottom: 2rem;
                     }
                 }
             }   
