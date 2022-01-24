@@ -76,7 +76,7 @@ var series = [
         id5: "#20",
     },
     {   
-        name: "5. Frozens",
+        name: "5. Ice-odelics",
         price: "ETH",
         item1: "./images/Coming.png",
         link1: "#0",
@@ -152,7 +152,7 @@ var series = [
         id5: "#40",
     },
     {   
-        name: "9. Earth classics (Occ)",
+        name: "9. Earth classics (Occident)",
         price: "ETH",
         item1: "./images/Coming.png",
         link1: "#0",
@@ -171,7 +171,7 @@ var series = [
         id5: "#45",
     },
     {   
-        name: "10. Earth classics (Or)",
+        name: "10. Earth classics (Orient)",
         price: "ETH",
         item1: "./images/Coming.png",
         link1: "#0",
@@ -228,7 +228,7 @@ var series = [
         id5: "#60",
     },
     {   
-        name: "13. Only for psychos",
+        name: "13. Really psychos",
         price: "ETH",
         item1: "./images/Coming.png",
         link1: "#0",
