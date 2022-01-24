@@ -138,7 +138,7 @@ window.addEventListener('scroll', () => scrollAppear("border", "borderPosition",
 
 //--------------------------------------------------TABLA MENU-------------------------------------------------- 
 
-var MenuSeries = document.querySelector("#menu");
+var MenuSeries = document.querySelector(".menuSeries");
 
 function createSerie(x){
 	var serie = document.createElement ("div");
@@ -199,10 +199,5 @@ for (let i = 0 ; i < series.length ; i++) {
 
 //--------------------------------------------------APPEAR SERIES-------------------------------------------------- 
 
-const nSeries = document.querySelectorAll(".serie");
-console.log (nSeries);
+window.addEventListener('scroll', () => scrollAppear("menuSeries", "menuSeriesPosition", "menuSeriesOn"));
 
-
-for(let i of nSeries) {
-	document.addEventListener('scroll', () => scrollAppear("serie", "seriePosition", "serieOn"));
-}

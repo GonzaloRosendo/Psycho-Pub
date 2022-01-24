@@ -294,16 +294,19 @@ body #about .borderOn {
   margin-bottom: 6rem;
 }
 
-#menu .serie {
-  margin: 0 10% 8rem 10%;
+#menu .menuSeries {
   opacity: 0;
-  -webkit-transform: translateX(-14rem);
-          transform: translateX(-14rem);
+  -webkit-transform: translatex(-14rem);
+          transform: translatex(-14rem);
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
 }
 
-#menu .serie .titlePrice {
+#menu .menuSeries .serie {
+  margin: 0 10% 8rem 10%;
+}
+
+#menu .menuSeries .serie .titlePrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,11 +322,11 @@ body #about .borderOn {
   margin-bottom: 3rem;
 }
 
-#menu .serie .titlePrice h4 {
+#menu .menuSeries .serie .titlePrice h4 {
   font-weight: normal;
 }
 
-#menu .serie .container {
+#menu .menuSeries .serie .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,7 +339,7 @@ body #about .borderOn {
           justify-content: space-between;
 }
 
-#menu .serie .container .box {
+#menu .menuSeries .serie .container .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,13 +350,13 @@ body #about .borderOn {
   position: relative;
 }
 
-#menu .serie .container .box img {
+#menu .menuSeries .serie .container .box img {
   width: 22rem;
   height: 22rem;
   margin-bottom: 1rem;
 }
 
-#menu .serie .container .box a {
+#menu .menuSeries .serie .container .box a {
   position: absolute;
   width: 18rem;
   height: 6rem;
@@ -366,32 +369,32 @@ body #about .borderOn {
   opacity: 0;
 }
 
-#menu .serie .container .box a p {
+#menu .menuSeries .serie .container .box a p {
   font-size: 1.7rem;
   color: #E7FF00;
   height: 6rem;
   line-height: 5.5rem;
 }
 
-#menu .serie .container .box p {
+#menu .menuSeries .serie .container .box p {
   color: white;
   font-size: 2.4rem;
 }
 
-#menu .serie .container .box:hover img {
+#menu .menuSeries .serie .container .box:hover img {
   opacity: 0.3;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-#menu .serie .container .box:hover a {
+#menu .menuSeries .serie .container .box:hover a {
   opacity: 1;
 }
 
-#menu .serieOn {
+#menu .menuSeriesOn {
   opacity: 1;
-  -webkit-transform: translateX(0rem);
-          transform: translateX(0rem);
+  -webkit-transform: translatex(0rem);
+          transform: translatex(0rem);
 }
 
 @-webkit-keyframes MoveSides {
@@ -572,27 +575,27 @@ body #about .borderOn {
   #menu h3 {
     font-size: 8rem;
   }
-  #menu .serie {
+  #menu .menuSeries .serie {
     margin: 0 10% 5rem 10%;
   }
-  #menu .serie .titlePrice {
+  #menu .menuSeries .serie .titlePrice {
     font-size: 3rem;
   }
-  #menu .serie .container .box img {
+  #menu .menuSeries .serie .container .box img {
     width: 16rem;
     height: 16rem;
   }
-  #menu .serie .container .box a {
+  #menu .menuSeries .serie .container .box a {
     width: 15rem;
     height: 5rem;
     top: 5.5rem;
     left: 0.5rem;
   }
-  #menu .serie .container .box a p {
+  #menu .menuSeries .serie .container .box a p {
     height: 5rem;
     line-height: 4.5rem;
   }
-  #menu .serie .container .box p {
+  #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
@@ -604,25 +607,25 @@ body #about .borderOn {
   #menu h3 {
     font-size: 5rem;
   }
-  #menu .serie {
+  #menu .menuSeries .serie {
     margin: 0 10% 2rem 10%;
   }
-  #menu .serie .container .box img {
+  #menu .menuSeries .serie .container .box img {
     width: 12rem;
     height: 12rem;
   }
-  #menu .serie .container .box a {
+  #menu .menuSeries .serie .container .box a {
     width: 12rem;
     height: 4rem;
     top: 4rem;
     left: 0rem;
   }
-  #menu .serie .container .box a p {
+  #menu .menuSeries .serie .container .box a p {
     font-size: 1.2rem;
     height: 4rem;
     line-height: 3.5rem;
   }
-  #menu .serie .container .box p {
+  #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
@@ -639,45 +642,45 @@ body #about .borderOn {
     margin: 0 10%;
     margin-bottom: 4rem;
   }
-  #menu .serie {
+  #menu .menuSeries .serie {
     margin: 0 10% 1rem 10%;
   }
-  #menu .serie .titlePrice {
+  #menu .menuSeries .serie .titlePrice {
     display: inline;
     font-size: 3rem;
   }
-  #menu .serie .titlePrice span {
+  #menu .menuSeries .serie .titlePrice span {
     font-size: 2.4rem;
   }
-  #menu .serie .container {
+  #menu .menuSeries .serie .container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
     margin-top: 3rem;
   }
-  #menu .serie .container .box {
+  #menu .menuSeries .serie .container .box {
     display: inline-block;
     border: 1px solid grey;
     margin-bottom: 2rem;
   }
-  #menu .serie .container .box img {
+  #menu .menuSeries .serie .container .box img {
     width: 15.5rem;
     height: 15.5rem;
     margin-bottom: 0rem;
   }
-  #menu .serie .container .box a {
+  #menu .menuSeries .serie .container .box a {
     width: 11rem;
     height: 4rem;
     top: 5.75rem;
     left: 2.25rem;
   }
-  #menu .serie .container .box a p {
+  #menu .menuSeries .serie .container .box a p {
     font-size: 1.2rem;
     height: 4rem;
     line-height: 3.5rem;
   }
-  #menu .serie .container .box p {
+  #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
