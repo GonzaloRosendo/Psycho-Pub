@@ -296,6 +296,11 @@ body #about .borderOn {
 
 #menu .serie {
   margin: 0 10% 8rem 10%;
+  opacity: 0;
+  -webkit-transform: translateX(-14rem);
+          transform: translateX(-14rem);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 #menu .serie .titlePrice {
@@ -381,6 +386,12 @@ body #about .borderOn {
 
 #menu .serie .container .box:hover a {
   opacity: 1;
+}
+
+#menu .serieOn {
+  opacity: 1;
+  -webkit-transform: translateX(0rem);
+          transform: translateX(0rem);
 }
 
 @-webkit-keyframes MoveSides {

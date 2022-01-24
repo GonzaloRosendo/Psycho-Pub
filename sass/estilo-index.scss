@@ -271,6 +271,10 @@ body {
 
     .serie {
         margin:0 10% 8rem 10%;
+        opacity: 0;
+        transform: translateX(-14rem);
+        transition: 0.5s all ease-in-out;
+
 
         .titlePrice {
             display: flex;
@@ -338,6 +342,11 @@ body {
                 }
             }
         }   
+    }
+
+    .serieOn {
+        opacity: 1;
+        transform: translateX(0rem);
     }
 }
 

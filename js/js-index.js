@@ -124,17 +124,17 @@ function Delete() {
 _INTERVAL_VAL = setInterval(Type, 100);
 
 //--------------------------------------------------SCROLL APPEAR-------------------------------------------------- 
-function scrollAppear() {
-	var border = document.querySelector('.border');
-	var borderPosition = border.getBoundingClientRect().top;
+function scrollAppear(x,y,z) {
+	var x = document.querySelector(`.${x}`);
+	var y = x.getBoundingClientRect().top;
 	var screenPosition = window.innerHeight / 1.35;
 
-	if (borderPosition < screenPosition) {
-		border.classList.add("borderOn");
+	if (y < screenPosition) {
+		x.classList.add(`${z}`);
 	}
 }
 
-window.addEventListener('scroll', scrollAppear);
+window.addEventListener('scroll', () => scrollAppear("border", "borderPosition", "borderOn"));
 
 //--------------------------------------------------TABLA MENU-------------------------------------------------- 
 
@@ -195,4 +195,14 @@ function createSerie(x){
 
 for (let i = 0 ; i < series.length ; i++) {
 	createSerie(series[i]);
+}
+
+//--------------------------------------------------APPEAR SERIES-------------------------------------------------- 
+
+const nSeries = document.querySelectorAll(".serie");
+console.log (nSeries);
+
+
+for(let i of nSeries) {
+	document.addEventListener('scroll', () => scrollAppear("serie", "seriePosition", "serieOn"));
 }
