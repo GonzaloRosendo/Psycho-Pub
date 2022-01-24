@@ -1,26 +1,3 @@
-//-------------------------------------------------- SHOW WHEN LOADED-------------------------------------------------- 
-var obj_contain = document.getElementById('contain');
-var obj_loadingMessage = document.getElementById('loadingMessage'); 
-function loading()
-{
-    var images = document.images;
-    for (var i = 0; i<images.length; i++) {
-        var image = images[i];
-        if (image.complete) {
-            if ((i+1)==images.length) {
-                obj_loadingMessage.style.display = 'none';
-                obj_contain.style.display = 'block';
-            }
-        } else {
-            setTimeout(loading, 30);
-            return false;
-        }
-    }
-}
-obj_contain.style.display = 'none';
-obj_loadingMessage.style.display = 'block';
-loading();
-
 //-------------------------------------------------- HAMBURGER MENU-------------------------------------------------- 
 
 const menu = document.querySelector(".menu");
@@ -198,6 +175,20 @@ for (let i = 0 ; i < series.length ; i++) {
 }
 
 //--------------------------------------------------APPEAR SERIES-------------------------------------------------- 
-
 window.addEventListener('scroll', () => scrollAppear("menuSeries", "menuSeriesPosition", "menuSeriesOn"));
+
+//--------------------------------------------------SHOW WHEN LOADED-------------------------------------------------- 
+document.onreadystatechange = function() {
+	if (document.readyState !== "complete") {
+		document.querySelector(
+		  "body").style.visibility = "hidden";
+		document.querySelector(
+		  "#loader").style.visibility = "visible";
+	} else {
+		document.querySelector(
+		  "#loader").style.display = "none";
+		document.querySelector(
+		  "body").style.visibility = "visible";
+	}
+};
 
