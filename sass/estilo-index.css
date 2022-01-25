@@ -288,8 +288,9 @@ body #about .border .structureAbout .textAbout p {
   width: 80%;
 }
 
-body #about .border .structureAbout .textAbout p span {
+body #about .border .structureAbout .textAbout p a {
   color: #E7FF00;
+  text-decoration: none;
 }
 
 body #about .borderOn {
@@ -627,11 +628,11 @@ body #about .borderOn {
     height: 2.4rem;
   }
   body header .menu #social #twitterHeader {
-    width: 2.5rem;
+    width: 3rem;
     height: 2.4rem;
   }
   body header .menu #social #twitterHeader #twitterHover {
-    width: 2.5rem;
+    width: 3rem;
     height: 2.4rem;
   }
   body header .hamburger {

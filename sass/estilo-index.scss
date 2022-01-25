@@ -250,8 +250,10 @@ body {
                     p{
                         text-align: justify;
                         width: 80%;
-                        span{
+
+                        a {
                             color: $green;
+                            text-decoration: none;
                         }
                     }
                 }
@@ -559,11 +561,11 @@ body {
                     }
                     
                     #twitterHeader{
-                        width: 2.5rem;
+                        width: 3rem;
                         height: $medium;
 
                         #twitterHover {
-                            width: 2.5rem;
+                            width: 3rem;
                         height: $medium;
                         }
                     }
