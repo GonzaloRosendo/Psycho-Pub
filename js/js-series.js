@@ -20,7 +20,7 @@ var series = [
     },
     {   
         name: "2. Psycachaças",
-        price: "0.1 ETH",
+        price: "ETH",
         item1: "./images/Psycachazas/Psycachaza1.png",
         link1: "#0",
         id1: "#6",
@@ -39,7 +39,7 @@ var series = [
     },
     {   
         name: "3. Frutilocas",
-        price: "0.1 ETH",
+        price: "ETH",
         item1: "./images/Frutilocas/Frutiloca1.png",
         link1: "#0",
         id1: "#11",
@@ -58,7 +58,7 @@ var series = [
     },
     {   
         name: "4. Psytinis",
-        price: "0.1 ETH",
+        price: "ETH",
         item1: "./images/Psytinis/Psytini1.png",
         link1: "#0",
         id1: "#16",

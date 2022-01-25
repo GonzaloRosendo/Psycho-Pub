@@ -386,7 +386,103 @@ body {
     50% {
       transform: translatex(-1000px);
     }
-  }
+}
+
+//------------------------------------------------CREATOR------------------------------------------------
+#creator {
+    padding: 10rem 3% 0 3%;
+    background-color: black ;
+    background-position: center;
+    background-size: 100% 100%;
+
+    .borderCreator {
+        border: 0.2rem solid grey;
+        padding: 3%;
+        opacity: 0;
+        transform: translateY(14rem);
+        transition: 0.5s all ease-in-out;
+
+        #titleCreator {
+            font-family: "Plus";
+            color: grey;
+            font-size: $medium;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .structureCreator {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            column-gap: 5%;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 6rem;
+
+            .videos {
+                video {
+                    float: left;
+                    width: 80%;
+                    border-radius: 100%;
+                }
+            }
+
+            .textCreator {
+                color: white;
+                font-size: $small;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;               
+                
+                h3 {
+                    color: $green;
+                    font-size: $xxlarge;
+                    margin-bottom: 3rem;
+
+                }
+
+                p{
+                    text-align: justify;
+                    width: 80%;
+                    margin-bottom: 4rem;
+                }
+            }
+
+            #socialGon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                a{
+                    margin: 0 1.5rem;
+                }
+    
+                #instagramGon{
+                    background: url(../logos/InstagramGon.svg) no-repeat;
+                    width: $small;
+                    height: $small;
+                }
+
+                #behanceGon{
+                    background: url(../logos/BehanceGon.svg) no-repeat;
+                    width: $small + 0.9rem;
+                    height: $small;
+                }
+
+                #linkedInGon{
+                    background: url(../logos/LinkedInGon.svg) no-repeat;
+                    width: $small;
+                    height: $small;
+                }
+            }
+        }
+    }
+
+    .borderCreatorOn {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
 
 
 
@@ -743,6 +839,102 @@ body {
                     }
                 }
             }   
+        }
+    }
+}
+
+//------------------------------------------------MEDIA QUERIES: CREATOR-----------------------------------------------
+@media (max-width: 1200px) {
+    body{
+        #creator {
+            .borderCreator {
+                .structureCreator {
+                    .textCreator {
+                        h3 {
+                            font-size: $xlarge;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    body{
+        #creator {
+            padding: 10% 3% 0 3%;
+            .borderCreator {
+                .structureCreator {
+                    .textCreator {
+                        h3 {
+                            font-size: $large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    body{
+        #creator {
+            padding-top: 20%;
+
+            .borderCreator {
+                padding: 5%;
+
+                #titleCreator {
+                    margin-bottom: 2rem;
+                }
+
+                .structureCreator {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    margin-bottom: 0;
+
+                    .videos {
+                        video{
+                            width: 100%;
+                            margin-bottom: 3rem;
+                        }
+                    }
+
+                    .textCreator {
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        
+                        p{
+                            text-align: justify;
+                            width: 100%;
+                            margin-bottom: 4rem;
+                        }
+
+                        #socialGon {
+                            a{
+                                margin: 0 1.5rem;
+                            }
+        
+                            #instagramGon{
+                                width: $medium;
+                                height: $medium;
+                            }
+                            
+                            #behanceGon{
+                                width: 3.8rem;
+                                height: $medium;
+                            }
+
+                            #linkedInGon{
+                                width: $medium;
+                                height: $medium;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

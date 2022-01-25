@@ -177,6 +177,9 @@ for (let i = 0 ; i < series.length ; i++) {
 //--------------------------------------------------APPEAR SERIES-------------------------------------------------- 
 window.addEventListener('scroll', () => scrollAppear("menuSeries", "menuSeriesPosition", "menuSeriesOn"));
 
+//--------------------------------------------------APPEAR CREATOR-------------------------------------------------- 
+window.addEventListener('scroll', () => scrollAppear("borderCreator", "borderCreatorPos", "borderCreatorOn"));
+
 //--------------------------------------------------SHOW WHEN LOADED-------------------------------------------------- 
 document.onreadystatechange = function() {
 	if (document.readyState !== "complete") {

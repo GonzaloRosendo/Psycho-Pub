@@ -455,6 +455,120 @@ body #about .borderOn {
   }
 }
 
+#creator {
+  padding: 10rem 3% 0 3%;
+  background-color: black;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+#creator .borderCreator {
+  border: 0.2rem solid grey;
+  padding: 3%;
+  opacity: 0;
+  -webkit-transform: translateY(14rem);
+          transform: translateY(14rem);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+#creator .borderCreator #titleCreator {
+  font-family: "Plus";
+  color: grey;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#creator .borderCreator .structureCreator {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6rem;
+}
+
+#creator .borderCreator .structureCreator .videos video {
+  float: left;
+  width: 80%;
+  border-radius: 100%;
+}
+
+#creator .borderCreator .structureCreator .textCreator {
+  color: white;
+  font-size: 1.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#creator .borderCreator .structureCreator .textCreator h3 {
+  color: #E7FF00;
+  font-size: 10rem;
+  margin-bottom: 3rem;
+}
+
+#creator .borderCreator .structureCreator .textCreator p {
+  text-align: justify;
+  width: 80%;
+  margin-bottom: 4rem;
+}
+
+#creator .borderCreator .structureCreator #socialGon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#creator .borderCreator .structureCreator #socialGon a {
+  margin: 0 1.5rem;
+}
+
+#creator .borderCreator .structureCreator #socialGon #instagramGon {
+  background: url(../logos/InstagramGon.svg) no-repeat;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+#creator .borderCreator .structureCreator #socialGon #behanceGon {
+  background: url(../logos/BehanceGon.svg) no-repeat;
+  width: 2.6rem;
+  height: 1.7rem;
+}
+
+#creator .borderCreator .structureCreator #socialGon #linkedInGon {
+  background: url(../logos/LinkedInGon.svg) no-repeat;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+#creator .borderCreatorOn {
+  opacity: 1;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+}
+
 @media (max-width: 1025px) {
   body header .menu li a {
     margin: 0 0.3rem;
@@ -718,6 +832,76 @@ body #about .borderOn {
   }
   #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  body #creator .borderCreator .structureCreator .textCreator h3 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  body #creator {
+    padding: 10% 3% 0 3%;
+  }
+  body #creator .borderCreator .structureCreator .textCreator h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 769px) {
+  body #creator {
+    padding-top: 20%;
+  }
+  body #creator .borderCreator {
+    padding: 5%;
+  }
+  body #creator .borderCreator #titleCreator {
+    margin-bottom: 2rem;
+  }
+  body #creator .borderCreator .structureCreator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+  body #creator .borderCreator .structureCreator .videos video {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  body #creator .borderCreator .structureCreator .textCreator {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  body #creator .borderCreator .structureCreator .textCreator p {
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  body #creator .borderCreator .structureCreator .textCreator #socialGon a {
+    margin: 0 1.5rem;
+  }
+  body #creator .borderCreator .structureCreator .textCreator #socialGon #instagramGon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  body #creator .borderCreator .structureCreator .textCreator #socialGon #behanceGon {
+    width: 3.8rem;
+    height: 2.4rem;
+  }
+  body #creator .borderCreator .structureCreator .textCreator #socialGon #linkedInGon {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }
 /*# sourceMappingURL=estilo-index.css.map */
