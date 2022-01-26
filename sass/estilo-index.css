@@ -963,7 +963,7 @@ body footer {
             flex-direction: column-reverse;
     margin-bottom: 0;
   }
-  body #creator .borderCreator .structureCreator .videos video {
+  body #creator .borderCreator .structureCreator .videos img {
     width: 100%;
     margin-bottom: 3rem;
   }
