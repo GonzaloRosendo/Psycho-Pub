@@ -231,9 +231,6 @@ body #intro #typeText #container #text {
 
 body #about {
   padding: 10rem 3% 0 3%;
-  background-image: url(../images/AboutHor.png);
-  background-position: center;
-  background-size: 100% 100%;
 }
 
 body #about .border {
@@ -549,9 +546,11 @@ body #creator .borderCreatorOn {
 }
 
 body #contact {
+  background-color: #480072;
   text-align: center;
   color: white;
   padding-top: 10rem;
+  margin-top: 5rem;
   height: 90vh;
 }
 
@@ -779,7 +778,6 @@ body footer {
 
 @media (max-width: 769px) {
   body #about {
-    background-image: url(../images/AboutVer.png);
     padding-top: 20%;
   }
   body #about .border {
@@ -1017,6 +1015,9 @@ body footer {
 }
 
 @media (max-width: 769px) {
+  body #contact {
+    padding-top: 20%;
+  }
   body #contact h3 {
     font-size: 3.8rem;
   }

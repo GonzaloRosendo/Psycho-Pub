@@ -204,9 +204,6 @@ body {
 //------------------------------------------------ABOUT------------------------------------------------
     #about {
         padding: 10rem 3% 0 3%;
-        background-image: url(../images/AboutHor.png);
-        background-position: center;
-        background-size: 100% 100%;
 
         .border {
             border: 0.2rem solid grey;
@@ -477,9 +474,11 @@ body {
 
 //------------------------------------------------CONTACT------------------------------------------------
     #contact {
+        background-color: #480072;
         text-align: center;
         color: white;
         padding-top: 10rem;
+        margin-top: 5rem;
         height: 90vh;
 
         #titleContact {
@@ -745,7 +744,6 @@ body {
 @media (max-width: 769px) {
     body{
         #about {
-            background-image: url(../images/AboutVer.png);
             padding-top: 20%;
 
             .border {
@@ -1068,6 +1066,8 @@ body {
 @media (max-width: 769px) {
     body {
         #contact {
+            padding-top: 20%;
+
             h3 {
                 font-size: $large + 0.8rem;
             }
