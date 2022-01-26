@@ -475,7 +475,7 @@ body #creator .borderCreator .structureCreator {
   margin-bottom: 6rem;
 }
 
-body #creator .borderCreator .structureCreator .videos video {
+body #creator .borderCreator .structureCreator .videos img {
   float: left;
   width: 80%;
   border-radius: 100%;
