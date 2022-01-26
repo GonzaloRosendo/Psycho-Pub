@@ -299,15 +299,15 @@ body #about .borderOn {
           transform: translateY(0rem);
 }
 
-#menu {
+body #menu {
   padding-top: 10rem;
 }
 
-#menu #titleMenu {
+body #menu #titleMenu {
   overflow: hidden;
 }
 
-#menu #titleMenu h2 {
+body #menu #titleMenu h2 {
   -webkit-animation: MoveSides 30s linear infinite;
           animation: MoveSides 30s linear infinite;
   color: grey;
@@ -316,7 +316,7 @@ body #about .borderOn {
   margin-bottom: 4rem;
 }
 
-#menu h3 {
+body #menu h3 {
   text-align: center;
   font-family: "Barista";
   font-size: 10rem;
@@ -324,14 +324,14 @@ body #about .borderOn {
   color: #E7FF00;
 }
 
-#menu #subtitleMenu {
+body #menu #subtitleMenu {
   text-align: center;
   color: white;
   font-size: 1.7rem;
   margin-bottom: 6rem;
 }
 
-#menu .menuSeries {
+body #menu .menuSeries {
   opacity: 0;
   -webkit-transform: translatex(-14rem);
           transform: translatex(-14rem);
@@ -339,11 +339,11 @@ body #about .borderOn {
   transition: 0.5s all ease-in-out;
 }
 
-#menu .menuSeries .serie {
+body #menu .menuSeries .serie {
   margin: 0 10% 8rem 10%;
 }
 
-#menu .menuSeries .serie .titlePrice {
+body #menu .menuSeries .serie .titlePrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,11 +359,11 @@ body #about .borderOn {
   margin-bottom: 3rem;
 }
 
-#menu .menuSeries .serie .titlePrice h4 {
+body #menu .menuSeries .serie .titlePrice h4 {
   font-weight: normal;
 }
 
-#menu .menuSeries .serie .container {
+body #menu .menuSeries .serie .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,7 +376,7 @@ body #about .borderOn {
           justify-content: space-between;
 }
 
-#menu .menuSeries .serie .container .box {
+body #menu .menuSeries .serie .container .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,13 +387,13 @@ body #about .borderOn {
   position: relative;
 }
 
-#menu .menuSeries .serie .container .box img {
+body #menu .menuSeries .serie .container .box img {
   width: 22rem;
   height: 22rem;
   margin-bottom: 1rem;
 }
 
-#menu .menuSeries .serie .container .box a {
+body #menu .menuSeries .serie .container .box a {
   position: absolute;
   width: 18rem;
   height: 6rem;
@@ -406,32 +406,238 @@ body #about .borderOn {
   opacity: 0;
 }
 
-#menu .menuSeries .serie .container .box a p {
+body #menu .menuSeries .serie .container .box a p {
   font-size: 1.7rem;
   color: #E7FF00;
   height: 6rem;
   line-height: 5.5rem;
 }
 
-#menu .menuSeries .serie .container .box p {
+body #menu .menuSeries .serie .container .box p {
   color: white;
   font-size: 2.4rem;
 }
 
-#menu .menuSeries .serie .container .box:hover img {
+body #menu .menuSeries .serie .container .box:hover img {
   opacity: 0.3;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-#menu .menuSeries .serie .container .box:hover a {
+body #menu .menuSeries .serie .container .box:hover a {
   opacity: 1;
 }
 
-#menu .menuSeriesOn {
+body #menu .menuSeriesOn {
   opacity: 1;
   -webkit-transform: translatex(0rem);
           transform: translatex(0rem);
+}
+
+body #creator {
+  padding: 10rem 3% 0 3%;
+  background-color: black;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+body #creator .borderCreator {
+  border: 0.2rem solid grey;
+  padding: 3%;
+  opacity: 0;
+  -webkit-transform: translateY(14rem);
+          transform: translateY(14rem);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+body #creator .borderCreator #titleCreator {
+  font-family: "Plus";
+  color: grey;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+body #creator .borderCreator .structureCreator {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6rem;
+}
+
+body #creator .borderCreator .structureCreator .videos video {
+  float: left;
+  width: 80%;
+  border-radius: 100%;
+}
+
+body #creator .borderCreator .structureCreator .textCreator {
+  color: white;
+  font-size: 1.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body #creator .borderCreator .structureCreator .textCreator h3 {
+  color: #E7FF00;
+  font-size: 10rem;
+  margin-bottom: 3rem;
+}
+
+body #creator .borderCreator .structureCreator .textCreator p {
+  text-align: justify;
+  width: 80%;
+  margin-bottom: 4rem;
+}
+
+body #creator .borderCreator .structureCreator #socialGon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #creator .borderCreator .structureCreator #socialGon a {
+  margin: 0 1.5rem;
+}
+
+body #creator .borderCreator .structureCreator #socialGon #instagramGon {
+  background: url(../logos/InstagramGon.svg) no-repeat;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+body #creator .borderCreator .structureCreator #socialGon #behanceGon {
+  background: url(../logos/BehanceGon.svg) no-repeat;
+  width: 2.6rem;
+  height: 1.7rem;
+}
+
+body #creator .borderCreator .structureCreator #socialGon #linkedInGon {
+  background: url(../logos/LinkedInGon.svg) no-repeat;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+body #creator .borderCreatorOn {
+  opacity: 1;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+}
+
+body #contact {
+  text-align: center;
+  color: white;
+  padding-top: 10rem;
+  height: 90vh;
+}
+
+body #contact #titleContact {
+  color: grey;
+  font-size: 2.4rem;
+  margin-bottom: 7rem;
+}
+
+body #contact h3 {
+  font-family: "Barista";
+  font-size: 10rem;
+  font-weight: normal;
+  color: #E7FF00;
+  margin-bottom: 2rem;
+}
+
+body #contact p {
+  font-size: 1.7rem;
+  margin-bottom: 6rem;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+body #contact #socialEnd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem;
+}
+
+body #contact #socialEnd a {
+  margin: 0 1.5rem;
+}
+
+body #contact #socialEnd #instagramContact {
+  background: url(../logos/Instagram.svg) no-repeat;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+body #contact #socialEnd #instagramContact #instagramContactHover {
+  opacity: 0;
+  background: url(../logos/InstagramHover.svg) no-repeat;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+body #contact #socialEnd #instagramContact:hover #instagramContactHover {
+  opacity: 1;
+}
+
+body #contact #socialEnd #twitterContact {
+  background: url(../logos/Twitter.svg) no-repeat;
+  width: 3rem;
+  height: 2.4rem;
+}
+
+body #contact #socialEnd #twitterContact #twitterContactHover {
+  opacity: 0;
+  background: url(../logos/TwitterHover.svg) no-repeat;
+  width: 3rem;
+  height: 2.4rem;
+}
+
+body #contact #socialEnd #twitterContact:hover #twitterContactHover {
+  opacity: 1;
+}
+
+body #contact #mail {
+  color: #E7FF00;
+  font-size: 2.4rem;
+}
+
+body footer {
+  color: grey;
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 3rem;
 }
 
 @-webkit-keyframes MoveSides {
@@ -454,120 +660,6 @@ body #about .borderOn {
     -webkit-transform: translatex(-1000px);
             transform: translatex(-1000px);
   }
-}
-
-#creator {
-  padding: 10rem 3% 0 3%;
-  background-color: black;
-  background-position: center;
-  background-size: 100% 100%;
-}
-
-#creator .borderCreator {
-  border: 0.2rem solid grey;
-  padding: 3%;
-  opacity: 0;
-  -webkit-transform: translateY(14rem);
-          transform: translateY(14rem);
-  -webkit-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
-}
-
-#creator .borderCreator #titleCreator {
-  font-family: "Plus";
-  color: grey;
-  font-size: 2.4rem;
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-#creator .borderCreator .structureCreator {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -webkit-column-gap: 5%;
-          column-gap: 5%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 6rem;
-}
-
-#creator .borderCreator .structureCreator .videos video {
-  float: left;
-  width: 80%;
-  border-radius: 100%;
-}
-
-#creator .borderCreator .structureCreator .textCreator {
-  color: white;
-  font-size: 1.7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#creator .borderCreator .structureCreator .textCreator h3 {
-  color: #E7FF00;
-  font-size: 10rem;
-  margin-bottom: 3rem;
-}
-
-#creator .borderCreator .structureCreator .textCreator p {
-  text-align: justify;
-  width: 80%;
-  margin-bottom: 4rem;
-}
-
-#creator .borderCreator .structureCreator #socialGon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#creator .borderCreator .structureCreator #socialGon a {
-  margin: 0 1.5rem;
-}
-
-#creator .borderCreator .structureCreator #socialGon #instagramGon {
-  background: url(../logos/InstagramGon.svg) no-repeat;
-  width: 1.7rem;
-  height: 1.7rem;
-}
-
-#creator .borderCreator .structureCreator #socialGon #behanceGon {
-  background: url(../logos/BehanceGon.svg) no-repeat;
-  width: 2.6rem;
-  height: 1.7rem;
-}
-
-#creator .borderCreator .structureCreator #socialGon #linkedInGon {
-  background: url(../logos/LinkedInGon.svg) no-repeat;
-  width: 1.7rem;
-  height: 1.7rem;
-}
-
-#creator .borderCreatorOn {
-  opacity: 1;
-  -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
 }
 
 @media (max-width: 1025px) {
@@ -723,115 +815,115 @@ body #about .borderOn {
 }
 
 @media (max-width: 1200px) {
-  #menu h3 {
+  body #menu h3 {
     font-size: 8rem;
   }
-  #menu .menuSeries .serie {
+  body #menu .menuSeries .serie {
     margin: 0 10% 5rem 10%;
   }
-  #menu .menuSeries .serie .titlePrice {
+  body #menu .menuSeries .serie .titlePrice {
     font-size: 3rem;
   }
-  #menu .menuSeries .serie .container .box img {
+  body #menu .menuSeries .serie .container .box img {
     width: 16rem;
     height: 16rem;
   }
-  #menu .menuSeries .serie .container .box a {
+  body #menu .menuSeries .serie .container .box a {
     width: 15rem;
     height: 5rem;
     top: 5.5rem;
     left: 0.5rem;
   }
-  #menu .menuSeries .serie .container .box a p {
+  body #menu .menuSeries .serie .container .box a p {
     height: 5rem;
     line-height: 4.5rem;
   }
-  #menu .menuSeries .serie .container .box p {
+  body #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
 
 @media (max-width: 1025px) {
-  #menu {
+  body #menu {
     padding-top: 10%;
   }
-  #menu h3 {
+  body #menu h3 {
     font-size: 5rem;
   }
-  #menu .menuSeries .serie {
+  body #menu .menuSeries .serie {
     margin: 0 10% 2rem 10%;
   }
-  #menu .menuSeries .serie .container .box img {
+  body #menu .menuSeries .serie .container .box img {
     width: 12rem;
     height: 12rem;
   }
-  #menu .menuSeries .serie .container .box a {
+  body #menu .menuSeries .serie .container .box a {
     width: 12rem;
     height: 4rem;
     top: 4rem;
     left: 0rem;
   }
-  #menu .menuSeries .serie .container .box a p {
+  body #menu .menuSeries .serie .container .box a p {
     font-size: 1.2rem;
     height: 4rem;
     line-height: 3.5rem;
   }
-  #menu .menuSeries .serie .container .box p {
+  body #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
 
 @media (max-width: 769px) {
-  #menu {
+  body #menu {
     padding-top: 20%;
   }
-  #menu h3 {
+  body #menu h3 {
     font-size: 3.8rem;
   }
-  #menu #subtitleMenu {
+  body #menu #subtitleMenu {
     font-size: 1.7rem;
     margin: 0 10%;
     margin-bottom: 4rem;
   }
-  #menu .menuSeries .serie {
+  body #menu .menuSeries .serie {
     margin: 0 10% 1rem 10%;
   }
-  #menu .menuSeries .serie .titlePrice {
+  body #menu .menuSeries .serie .titlePrice {
     display: inline;
     font-size: 3rem;
   }
-  #menu .menuSeries .serie .titlePrice span {
+  body #menu .menuSeries .serie .titlePrice span {
     font-size: 2.4rem;
   }
-  #menu .menuSeries .serie .container {
+  body #menu .menuSeries .serie .container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
     margin-top: 3rem;
   }
-  #menu .menuSeries .serie .container .box {
+  body #menu .menuSeries .serie .container .box {
     display: inline-block;
     border: 1px solid grey;
     margin-bottom: 2rem;
   }
-  #menu .menuSeries .serie .container .box img {
+  body #menu .menuSeries .serie .container .box img {
     width: 15.5rem;
     height: 15.5rem;
     margin-bottom: 0rem;
   }
-  #menu .menuSeries .serie .container .box a {
+  body #menu .menuSeries .serie .container .box a {
     width: 11rem;
     height: 4rem;
     top: 5.75rem;
     left: 2.25rem;
   }
-  #menu .menuSeries .serie .container .box a p {
+  body #menu .menuSeries .serie .container .box a p {
     font-size: 1.2rem;
     height: 4rem;
     line-height: 3.5rem;
   }
-  #menu .menuSeries .serie .container .box p {
+  body #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
@@ -903,6 +995,31 @@ body #about .borderOn {
   body #creator .borderCreator .structureCreator .textCreator #socialGon #linkedInGon {
     width: 2.4rem;
     height: 2.4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  body #contact h3 {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  body #contact h3 {
+    font-size: 5rem;
+  }
+  body #contact p {
+    width: 50%;
+  }
+}
+
+@media (max-width: 769px) {
+  body #contact h3 {
+    font-size: 3.8rem;
+  }
+  body #contact p {
+    width: 80%;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=estilo-index.css.map */
