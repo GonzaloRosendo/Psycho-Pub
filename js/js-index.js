@@ -129,7 +129,7 @@ function createSerie(x){
 							<div class="container">
 								<div class="box">
 									<img src="${x.item1}" alt="${x.id}">
-									<a href="${x.link1}">
+									<a href=${x.link1}>
 										<p>Buy on Rarible</p>
 									</a>
 									<p>${x.id1}</p>
@@ -137,7 +137,7 @@ function createSerie(x){
 
 								<div class="box">
 									<img src="${x.item2}" alt="${x.id2}">
-									<a href="${x.link2}">
+									<a href=${x.link2}>
 										<p>Buy on Rarible</p>
 									</a>
 									<p>${x.id2}</p>
@@ -145,7 +145,7 @@ function createSerie(x){
 
 								<div class="box">
 									<img src="${x.item3}" alt="${x.id3}">
-									<a href="${x.link3}">
+									<a href=${x.link3}>
 										<p>Buy on Rarible</p>
 									</a>
 									<p>${x.id3}</p>
@@ -153,7 +153,7 @@ function createSerie(x){
 								
 								<div class="box">
 									<img src="${x.item4}" alt="${x.id4}">
-									<a href="${x.link4}">
+									<a href=${x.link4}>
 										<p>Buy on Rarible</p>
 									</a>
 									<p>${x.id4}</p>
@@ -161,7 +161,7 @@ function createSerie(x){
 								
 								<div class="box">
 									<img src="${x.item5}" alt="${x.id5}">
-									<a href="${x.link5}">
+									<a href=${x.link5}>
 										<p>Buy on Rarible</p>
 									</a>
 									<p>${x.id5}</p>
@@ -181,17 +181,17 @@ window.addEventListener('scroll', () => scrollAppear("menuSeries", "menuSeriesPo
 window.addEventListener('scroll', () => scrollAppear("borderCreator", "borderCreatorPos", "borderCreatorOn"));
 
 //--------------------------------------------------SHOW WHEN LOADED-------------------------------------------------- 
-document.onreadystatechange = function() {
-	if (document.readyState !== "complete") {
-		document.querySelector(
-		  "body").style.visibility = "hidden";
-		document.querySelector(
-		  "#loader").style.visibility = "visible";
-	} else {
-		document.querySelector(
-		  "#loader").style.display = "none";
-		document.querySelector(
-		  "body").style.visibility = "visible";
-	}
-};
+// document.onreadystatechange = function() {
+// 	if (document.readyState !== "complete") {
+// 		document.querySelector(
+// 		  "body").style.visibility = "hidden";
+// 		document.querySelector(
+// 		  "#loader").style.visibility = "visible";
+// 	} else {
+// 		document.querySelector(
+// 		  "#loader").style.display = "none";
+// 		document.querySelector(
+// 		  "body").style.visibility = "visible";
+// 	}
+// };
 
