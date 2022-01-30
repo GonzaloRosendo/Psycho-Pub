@@ -360,6 +360,10 @@ body #menu .menuSeries .serie .titlePrice h4 {
   font-weight: normal;
 }
 
+body #menu .menuSeries .serie .titlePrice span {
+  color: #FF00FF;
+}
+
 body #menu .menuSeries .serie .container {
   display: -webkit-box;
   display: -ms-flexbox;

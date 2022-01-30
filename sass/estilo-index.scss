@@ -305,13 +305,17 @@ body {
                 .titlePrice {
                     display: flex;
                     flex-direction: row;
-                    color: #E7FF00;
+                    color: $green;
                     font-size: $xlarge;
                     justify-content: space-between;
                     margin-bottom: 3rem;
         
                     h4 {
                         font-weight: normal;
+                    }
+
+                    span {
+                        color: $pink;
                     }
                 }
         
