@@ -30,8 +30,11 @@ $xxlarge: 10rem;
 
 body {
     background-color: black;
+    visibility: hidden;
 
     #loader {
+        visibility: visible;
+        position: fixed;
         background-color: black;
         width: 100%;
         height: 100%;
