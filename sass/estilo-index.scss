@@ -30,10 +30,8 @@ $xxlarge: 10rem;
 
 body {
     background-color: black;
-    visibility: hidden;
 
     #loader {
-        visibility: visible;
         position: fixed;
         background-color: black;
         width: 100%;
@@ -44,8 +42,9 @@ body {
         width: 70px;
         height: 70px;
         animation: spin 1s linear infinite;
+        z-index: 100;
     }
-      
+
     @keyframes spin {
         100% {
             transform: rotate(360deg);
@@ -60,6 +59,9 @@ body {
         right: 0;
         margin: auto;
     }
+
+    #page {
+        display: none;
 //------------------------------------------------HEADER------------------------------------------------
     header {
         height: 8rem;
@@ -165,40 +167,53 @@ body {
 
 //------------------------------------------------INTRO------------------------------------------------
     #intro {
-        background-image: url(../images/Intro.png);
-        background-size: cover;
-        background-position: center center;
         width: 100%;
         height: 110vh;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-left: 10%;
 
-        #welcome {
-            width: 60rem;
-            margin-bottom: 4rem;
+        #backgroundIntro {
+            height: 110vh;
+            overflow: hidden;
+
+            #videoIntro {
+                width: 100%;
+                opacity: 0.8;
+                align-items: center;
+            }
         }
 
-        #typeText {
+        #welcomeContent {
+            position: absolute;
+            top: 17rem;
+            left: 10%;
+            z-index: 1;
             display: flex;
-            align-items: center;
-            color: $green;
-            font-size: $large;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 0 1rem;
+            flex-direction: column;
+            align-items: flex-start;
 
-            #container {
-                text-align: center;
-                color: $pink;
-                margin: 0 0.5rem;
-
-                #text {
-                    display: inline-block;
-                    vertical-align: top;
-                    font-family: "Plus";
+            #welcome {
+                width: 60rem;
+                margin-bottom: 4rem;
+            }
+    
+            #typeText {
+                display: flex;
+                align-items: center;
+                color: $green;
+                font-size: $large;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 0 1rem;
+    
+                #container {
+                    text-align: center;
                     color: $pink;
+                    margin: 0 0.5rem;
+    
+                    #text {
+                        display: inline-block;
+                        vertical-align: top;
+                        font-family: "Plus";
+                        color: $pink;
+                    }
                 }
             }
         }
@@ -317,8 +332,18 @@ body {
                         font-weight: normal;
                     }
 
-                    span {
-                        color: $pink;
+                    #eth {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        span {
+                            color: $pink;
+                        }
+
+                        img {
+                            width: 4.5rem;
+                        }
                     }
                 }
         
@@ -574,6 +599,7 @@ body {
         
     }
 }
+}
 
 @keyframes MoveSides {
     0%, 100% {
@@ -591,17 +617,19 @@ body {
 //------------------------------------------------MEDIA QUERIES: HEADER------------------------------------------------
 @media (max-width: 1025px) {
     body {
-        header {
-            .menu {
-                li {
-                    a {
-                        margin: 0 0.3rem;
+        #page {
+            header {
+                .menu {
+                    li {
+                        a {
+                            margin: 0 0.3rem;
+                        }
                     }
-                }
 
-                #social {
-                    a{
-                        margin: 0 1.2rem;
+                    #social {
+                        a{
+                            margin: 0 1.2rem;
+                        }
                     }
                 }
             }
@@ -611,70 +639,72 @@ body {
 
 @media (max-width: 769px) {
     body {
-        header {
-            #logoPsychoPub {
-                img {
-                    height: 5rem;
-                }
-            }
-
-            .menu {
-                position: fixed;
-                transform: translate(-100%);
-                transition: transform 0.2s;
-                top: 8rem;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: black;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding-top: 3rem;
-                margin-right: 0;
-
-                li {
-                    a {
-                        margin: auto;
-                        padding: 2rem 0;
+        #page {
+            header {
+                #logoPsychoPub {
+                    img {
+                        height: 5rem;
                     }
                 }
-                
-                #social {
-                    margin-top: 17rem;
 
-                    a{
-                        margin: 0 1.5rem;
-                    }
+                .menu {
+                    position: fixed;
+                    transform: translate(-100%);
+                    transition: transform 0.2s;
+                    top: 8rem;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 3rem;
+                    margin-right: 0;
 
-                    #instagramHeader{
-                        width: $medium;
-                        height: $medium;
-
-                        #instagramHover {
-                            width: $medium;
-                            height: $medium;
+                    li {
+                        a {
+                            margin: auto;
+                            padding: 2rem 0;
                         }
                     }
                     
-                    #twitterHeader{
-                        width: 3rem;
-                        height: $medium;
+                    #social {
+                        margin-top: 17rem;
 
-                        #twitterHover {
+                        a{
+                            margin: 0 1.5rem;
+                        }
+
+                        #instagramHeader{
+                            width: $medium;
+                            height: $medium;
+
+                            #instagramHover {
+                                width: $medium;
+                                height: $medium;
+                            }
+                        }
+                        
+                        #twitterHeader{
                             width: 3rem;
-                        height: $medium;
+                            height: $medium;
+
+                            #twitterHover {
+                                width: 3rem;
+                            height: $medium;
+                            }
                         }
                     }
                 }
-            }
 
-            .hamburger {
-                display: inline;
-            }
+                .hamburger {
+                    display: inline;
+                }
 
-            .showMenu {
-                transform: translate(0);
+                .showMenu {
+                    transform: translate(0);
+                }
             }
         }
     }
@@ -683,18 +713,27 @@ body {
 //------------------------------------------------MEDIA QUERIES: INTRO------------------------------------------------
 @media (max-width: 1025px) {
     body{
-        #intro {
-            align-items: center;
-            padding-left: 0;
-            height: 100vh;
+        #page {
+            #intro {
+                height: 100%;
 
-            #welcome {
-                width: 60%;
-                margin-bottom: 3rem;
-            }
-
-            #typeText {
-                font-size: $medium;
+                #backgroundIntro {
+                    height: 100%;
+                    overflow: hidden;
+                }
+            
+                #welcomeContent {
+                    top: 20%;
+            
+                    #welcome {
+                        width: 60%;
+                        margin-bottom: 3rem;
+                    }
+            
+                    #typeText {
+                        font-size: $medium;
+                    }
+                }
             }
         }
     }
@@ -702,13 +741,31 @@ body {
 
 @media (max-width: 769px) {
     body{
-        #intro {
-            #welcome {
-                width: 90%;
-            }
+        #page {
+            #intro {
 
-            #typeText {
-                font-size: $small;
+                #backgroundIntro {
+                    justify-content: center;
+                    margin: auto;
+
+                    #videoIntro {
+                        width: 140rem;
+                    }
+                }
+
+                #welcomeContent {
+                    align-items: center;
+                    top: 32%;
+                    left: 0;
+
+                    #welcome {
+                        width: 90%;
+                    }
+
+                    #typeText {
+                        font-size: $small;
+                    }
+                }
             }
         }
     }
@@ -717,12 +774,14 @@ body {
 //------------------------------------------------MEDIA QUERIES: ABOUT------------------------------------------------
 @media (max-width: 1200px) {
     body{
-        #about {
-            .border {
-                .structureAbout {
-                    .textAbout {
-                        h3 {
-                            font-size: $xlarge;
+        #page {
+            #about {
+                .border {
+                    .structureAbout {
+                        .textAbout {
+                            h3 {
+                                font-size: $xlarge;
+                            }
                         }
                     }
                 }
@@ -733,13 +792,15 @@ body {
 
 @media (max-width: 1025px) {
     body{
-        #about {
-            padding: 10% 3% 0 3%;
-            .border {
-                .structureAbout {
-                    .textAbout {
-                        h3 {
-                            font-size: $large;
+        #page {
+            #about {
+                padding: 10% 3% 0 3%;
+                .border {
+                    .structureAbout {
+                        .textAbout {
+                            h3 {
+                                font-size: $large;
+                            }
                         }
                     }
                 }
@@ -750,35 +811,37 @@ body {
 
 @media (max-width: 769px) {
     body{
-        #about {
-            padding-top: 20%;
+        #page {
+            #about {
+                padding-top: 20%;
 
-            .border {
-                padding: 5%;
+                .border {
+                    padding: 5%;
 
-                #titleAbout {
-                    margin-bottom: 2rem;
-                }
-
-                .structureAbout {
-                    display: flex;
-                    flex-direction: column-reverse;
-                    align-items: center;
-                    margin-bottom: 0;
-
-                    .videos {
-                        video{
-                            width: 100%;
-                        }
+                    #titleAbout {
+                        margin-bottom: 2rem;
                     }
 
-                    .textAbout {
-                        text-align: center;
-                        
-                        p{
-                            text-align: justify;
-                            width: 100%;
-                            margin-bottom: 5rem;
+                    .structureAbout {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        margin-bottom: 0;
+
+                        .videos {
+                            video{
+                                width: 100%;
+                            }
+                        }
+
+                        .textAbout {
+                            text-align: center;
+                            
+                            p{
+                                text-align: justify;
+                                width: 100%;
+                                margin-bottom: 5rem;
+                            }
                         }
                     }
                 }
@@ -790,41 +853,49 @@ body {
 //------------------------------------------------MEDIA QUERIES: MENU-----------------------------------------------
 @media (max-width: 1200px) {
     body {
-        #menu {  
-            h3 {
-                font-size: $xxlarge - 2rem;
-            }
+        #page {
+            #menu {  
+                h3 {
+                    font-size: $xxlarge - 2rem;
+                }
 
-            .menuSeries {
-                .serie {
-                    margin:0 10% 5rem 10%;
-            
-                    .titlePrice {
-                        font-size: $large;
-                    }
-            
-                    .container {
-                        .box {
-                            img {
-                                width: 16rem;
-                                height: 16rem;
-                            }
+                .menuSeries {
+                    .serie {
+                        margin:0 10% 5rem 10%;
+                
+                        .titlePrice {
+                            font-size: $large;
 
-                            a {
-                                width: 15rem;
-                                height: 5rem;
-                                top: 5.5rem;
-                                left: 0.5rem;
-            
-                                p{
-                                    height: 5rem;
-                                    line-height: 4.5rem;
+                            #eth {
+                                img {
+                                    width: 3.5rem;
                                 }
                             }
+                        }
+                
+                        .container {
+                            .box {
+                                img {
+                                    width: 16rem;
+                                    height: 16rem;
+                                }
 
-                            p{
-                                font-size: $small;
-                                
+                                a {
+                                    width: 15rem;
+                                    height: 5rem;
+                                    top: 5.5rem;
+                                    left: 0.5rem;
+                
+                                    p{
+                                        height: 5rem;
+                                        line-height: 4.5rem;
+                                    }
+                                }
+
+                                p{
+                                    font-size: $small;
+                                    
+                                }
                             }
                         }
                     }
@@ -836,43 +907,53 @@ body {
 
 @media (max-width: 1025px) {
     body {
-        #menu {
-            padding-top: 10%;    
+        #page {
+            #menu {
+                padding-top: 10%;    
 
-            h3 {
-                font-size: $xlarge;
-            }
+                h3 {
+                    font-size: $xlarge;
+                }
 
-            .menuSeries {
-                .serie {
-                    margin:0 10% 2rem 10%;
+                .menuSeries {
+                    .serie {
+                        margin:0 10% 2rem 10%;
 
-                    .container {
-                        .box {
-                            img {
-                                width: 12rem;
-                                height: 12rem;
-                            }
-
-                            a {
-                                width: 12rem;
-                                height: 4rem;
-                                top: 4rem;
-                                left: 0rem;
-            
-                                p{
-                                    font-size: $small - 0.5rem;
-                                    height: 4rem;
-                                    line-height: 3.5rem;
+                        .titlePrice {
+                            #eth {
+                                img {
+                                    width: 3rem;
                                 }
                             }
+                        }
 
-                            p{
-                                font-size: $small;
+                        .container {
+                            .box {
+                                img {
+                                    width: 12rem;
+                                    height: 12rem;
+                                }
+
+                                a {
+                                    width: 12rem;
+                                    height: 4rem;
+                                    top: 4rem;
+                                    left: 0rem;
+                
+                                    p{
+                                        font-size: $small - 0.5rem;
+                                        height: 4rem;
+                                        line-height: 3.5rem;
+                                    }
+                                }
+
+                                p{
+                                    font-size: $small;
+                                }
                             }
                         }
-                    }
-                }   
+                    }   
+                }
             }
         }
     }
@@ -880,63 +961,65 @@ body {
 
 @media (max-width: 769px) {
     body {
-        #menu {    
-            padding-top: 20%;
+        #page {
+            #menu {    
+                padding-top: 20%;
 
-            h3 {
-                font-size: $large + 0.8rem;
-            }
+                h3 {
+                    font-size: $large + 0.8rem;
+                }
 
-            #subtitleMenu{
-                font-size: $small;
-                margin: 0 10%;
-                margin-bottom: 4rem;
-            }
+                #subtitleMenu{
+                    font-size: $small;
+                    margin: 0 10%;
+                    margin-bottom: 4rem;
+                }
 
-            .menuSeries  {
-                .serie {
-                    margin:0 10% 1rem 10%;
+                .menuSeries  {
+                    .serie {
+                        margin:0 10% 1rem 10%;
 
-                    .titlePrice {
-                        display: inline;
-                        font-size: $large;
-                        
-                        span {
-                            font-size: $medium;
+                        .titlePrice {
+                            display: inline;
+                            font-size: $large;
+                            
+                            span {
+                                font-size: $medium;
+                            }
                         }
-                    }
 
-                    .container {
-                        display: grid;
-                        grid-template-columns: repeat(2, auto);
-                        margin-top: 3rem;
+                        .container {
+                            display: grid;
+                            grid-template-columns: repeat(2, auto);
+                            margin-top: 3rem;
 
-                        .box {
-                            display: inline-block;
-                            border: 1px solid grey;
-                            margin-bottom: 2rem;
+                            .box {
+                                display: inline-block;
+                                border: 1px solid grey;
+                                margin-bottom: 2rem;
 
-                            img {
-                                width: 15.5rem;
-                                height: 15.5rem;
-                                margin-bottom: 0rem;
-                            }
-
-                            a {
-                                width: 11rem;
-                                height: 4rem;
-                                top: 5.75rem;
-                                left: 2.25rem;
-            
-                                p{
-                                    font-size: $small - 0.5rem;
-                                    height: 4rem;
-                                    line-height: 3.5rem;
+                                img {
+                                    width: 15.5rem;
+                                    height: 15.5rem;
+                                    margin-bottom: 0rem;
                                 }
-                            }
 
-                            p{
-                                font-size: $small;
+                                a {
+                                    width: 11rem;
+                                    height: 4rem;
+                                    top: 5.75rem;
+                                    left: 2.25rem;
+                
+                                    p{
+                                        font-size: $small - 0.5rem;
+                                        height: 4rem;
+                                        line-height: 3.5rem;
+                                    }
+                                }
+
+                                p{
+                                    font-size: $small;
+                                }
                             }
                         }
                     }
@@ -949,12 +1032,14 @@ body {
 //------------------------------------------------MEDIA QUERIES: CREATOR-----------------------------------------------
 @media (max-width: 1200px) {
     body{
-        #creator {
-            .borderCreator {
-                .structureCreator {
-                    .textCreator {
-                        h3 {
-                            font-size: $xlarge;
+        #page {
+            #creator {
+                .borderCreator {
+                    .structureCreator {
+                        .textCreator {
+                            h3 {
+                                font-size: $xlarge;
+                            }
                         }
                     }
                 }
@@ -965,13 +1050,15 @@ body {
 
 @media (max-width: 1025px) {
     body{
-        #creator {
-            padding: 10% 3% 0 3%;
-            .borderCreator {
-                .structureCreator {
-                    .textCreator {
-                        h3 {
-                            font-size: $large;
+        #page {
+            #creator {
+                padding: 10% 3% 0 3%;
+                .borderCreator {
+                    .structureCreator {
+                        .textCreator {
+                            h3 {
+                                font-size: $large;
+                            }
                         }
                     }
                 }
@@ -982,59 +1069,61 @@ body {
 
 @media (max-width: 769px) {
     body{
-        #creator {
-            padding-top: 20%;
+        #page {
+            #creator {
+                padding-top: 20%;
 
-            .borderCreator {
-                padding: 5%;
+                .borderCreator {
+                    padding: 5%;
 
-                #titleCreator {
-                    margin-bottom: 2rem;
-                }
-
-                .structureCreator {
-                    display: flex;
-                    flex-direction: column-reverse;
-                    margin-bottom: 0;
-
-                    .videos {
-                        img{
-                            width: 100%;
-                            margin-bottom: 3rem;
-                        }
+                    #titleCreator {
+                        margin-bottom: 2rem;
                     }
 
-                    .textCreator {
-                        justify-content: center;
-                        align-items: center;
-                        text-align: center;
-                        
-                        p{
-                            text-align: justify;
-                            width: 100%;
-                            margin-bottom: 4rem;
+                    .structureCreator {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        margin-bottom: 0;
+
+                        .videos {
+                            img{
+                                width: 100%;
+                                margin-bottom: 3rem;
+                            }
                         }
 
-                        #socialGon {
-                            margin-bottom: 2rem;
-
-                            a{
-                                margin: 0 1.5rem;
-                            }
-        
-                            #instagramGon{
-                                width: $medium;
-                                height: $medium;
-                            }
+                        .textCreator {
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
                             
-                            #behanceGon{
-                                width: 3.8rem;
-                                height: $medium;
+                            p{
+                                text-align: justify;
+                                width: 100%;
+                                margin-bottom: 4rem;
                             }
 
-                            #linkedInGon{
-                                width: $medium;
-                                height: $medium;
+                            #socialGon {
+                                margin-bottom: 2rem;
+
+                                a{
+                                    margin: 0 1.5rem;
+                                }
+            
+                                #instagramGon{
+                                    width: $medium;
+                                    height: $medium;
+                                }
+                                
+                                #behanceGon{
+                                    width: 3.8rem;
+                                    height: $medium;
+                                }
+
+                                #linkedInGon{
+                                    width: $medium;
+                                    height: $medium;
+                                }
                             }
                         }
                     }
@@ -1047,9 +1136,11 @@ body {
 //------------------------------------------------MEDIA QUERIES: CONTACT-----------------------------------------------
 @media (max-width: 1200px) {
     body {
-        #contact {  
-            h3 {
-                font-size: $xxlarge - 2rem;
+        #page {
+            #contact {  
+                h3 {
+                    font-size: $xxlarge - 2rem;
+                }
             }
         }
     }
@@ -1057,31 +1148,34 @@ body {
 
 @media (max-width: 1025px) {
     body {
-        #contact {
-            h3 {
-                font-size: $xlarge;
-            }
+        #page {
+            #contact {
+                h3 {
+                    font-size: $xlarge;
+                }
 
-            p {
-                width: 50%;
+                p {
+                    width: 50%;
+                }
             }
-
         }
     }
 }
 
 @media (max-width: 769px) {
     body {
-        #contact {
-            padding-top: 20%;
+        #page {
+            #contact {
+                padding-top: 20%;
 
-            h3 {
-                font-size: $large + 0.8rem;
-            }
+                h3 {
+                    font-size: $large + 0.8rem;
+                }
 
-            p {
-                width: 80%;
-                text-align: center;
+                p {
+                    width: 80%;
+                    text-align: center;
+                }
             }
         }
     }

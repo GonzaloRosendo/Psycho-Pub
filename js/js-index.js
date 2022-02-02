@@ -123,7 +123,11 @@ function createSerie(x){
 	serie.innerHTML = `
 							<div class="titlePrice">
 								<h4>${x.name}</h4>
-								<span>${x.price}</span>
+
+								<div id="eth">
+									<span>${x.price}</span>
+									<img src="./logos/Ethereum.svg" alt="Gonzalo Rosendo">
+								</div>
 							</div>
 
 							<div class="container">
@@ -181,24 +185,10 @@ window.addEventListener('scroll', () => scrollAppear("menuSeries", "menuSeriesPo
 window.addEventListener('scroll', () => scrollAppear("borderCreator", "borderCreatorPos", "borderCreatorOn"));
 
 //--------------------------------------------------SHOW WHEN LOADED-------------------------------------------------- 
-// document.onreadystatechange = function() {
-// 	if (document.readyState !== "complete") {
-// 		document.querySelector(
-// 		  "body").style.visibility = "hidden";
-// 		document.querySelector(
-// 		  "#loader").style.visibility = "visible";
-// 	} else {
-// 		document.querySelector(
-// 		  "#loader").style.display = "none";
-// 		document.querySelector(
-// 		  "body").style.visibility = "visible";
-// 	}
-// };
+function fade () {
+	$('#loader').delay(5000).fadeOut();
+	$('#page').delay(5000).fadeIn();
+}
 
-//--------------------------------------------------SHOW WHEN LOADED-------------------------------------------------- 
-$(document).ready(function(){
-	setTimeout (function(){
-		document.querySelector("#loader").style.display = "none";
-		document.querySelector("body").style.visibility = "visible";
-	}, 7000);
-})
+fade ();
+

@@ -26,11 +26,9 @@ html {
 /*Variables*/
 body {
   background-color: black;
-  visibility: hidden;
 }
 
 body #loader {
-  visibility: visible;
   position: fixed;
   background-color: black;
   width: 100%;
@@ -42,6 +40,7 @@ body #loader {
   height: 70px;
   -webkit-animation: spin 1s linear infinite;
           animation: spin 1s linear infinite;
+  z-index: 100;
 }
 
 @-webkit-keyframes spin {
@@ -67,7 +66,11 @@ body .center {
   margin: auto;
 }
 
-body header {
+body #page {
+  display: none;
+}
+
+body #page header {
   height: 8rem;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -85,36 +88,36 @@ body header {
   z-index: 2;
 }
 
-body header #logoPsychoPub {
+body #page header #logoPsychoPub {
   margin-left: 10%;
 }
 
-body header #logoPsychoPub img {
+body #page header #logoPsychoPub img {
   height: 6rem;
 }
 
-body header .menu {
+body #page header .menu {
   margin-right: 10%;
 }
 
-body header .menu li {
+body #page header .menu li {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-body header .menu li a {
+body #page header .menu li a {
   font-size: 1.7rem;
   color: #E7FF00;
   text-decoration: none;
   margin: 0 1rem;
 }
 
-body header .menu li a:hover {
+body #page header .menu li a:hover {
   color: #FF00FF;
 }
 
-body header .menu #social {
+body #page header .menu #social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,65 +129,82 @@ body header .menu #social {
           align-items: center;
 }
 
-body header .menu #social a {
+body #page header .menu #social a {
   margin: 0 1.5rem;
 }
 
-body header .menu #social #instagramHeader {
+body #page header .menu #social #instagramHeader {
   background: url(../logos/Instagram.svg) no-repeat;
   width: 1.7rem;
   height: 1.7rem;
 }
 
-body header .menu #social #instagramHeader #instagramHover {
+body #page header .menu #social #instagramHeader #instagramHover {
   opacity: 0;
   background: url(../logos/InstagramHover.svg) no-repeat;
   width: 1.7rem;
   height: 1.7rem;
 }
 
-body header .menu #social #instagramHeader:hover #instagramHover {
+body #page header .menu #social #instagramHeader:hover #instagramHover {
   opacity: 1;
 }
 
-body header .menu #social #twitterHeader {
+body #page header .menu #social #twitterHeader {
   background: url(../logos/Twitter.svg) no-repeat;
   width: 1.9rem;
   height: 1.7rem;
 }
 
-body header .menu #social #twitterHeader #twitterHover {
+body #page header .menu #social #twitterHeader #twitterHover {
   opacity: 0;
   background: url(../logos/TwitterHover.svg) no-repeat;
   width: 1.9rem;
   height: 1.7rem;
 }
 
-body header .menu #social #twitterHeader:hover #twitterHover {
+body #page header .menu #social #twitterHeader:hover #twitterHover {
   opacity: 1;
 }
 
-body header .hamburger {
+body #page header .hamburger {
   display: none;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   margin-right: 10%;
 }
 
-body header .hamburger i {
+body #page header .hamburger i {
   background-color: #E7FF00;
 }
 
-body header .hamburger .closeIcon {
+body #page header .hamburger .closeIcon {
   display: none;
 }
 
-body #intro {
-  background-image: url(../images/Intro.png);
-  background-size: cover;
-  background-position: center center;
+body #page #intro {
   width: 100%;
   height: 110vh;
+}
+
+body #page #intro #backgroundIntro {
+  height: 110vh;
+  overflow: hidden;
+}
+
+body #page #intro #backgroundIntro #videoIntro {
+  width: 100%;
+  opacity: 0.8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #page #intro #welcomeContent {
+  position: absolute;
+  top: 17rem;
+  left: 10%;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,18 +215,14 @@ body #intro {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-left: 10%;
 }
 
-body #intro #welcome {
+body #page #intro #welcomeContent #welcome {
   width: 60rem;
   margin-bottom: 4rem;
 }
 
-body #intro #typeText {
+body #page #intro #welcomeContent #typeText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,24 +235,24 @@ body #intro #typeText {
   padding: 0 1rem;
 }
 
-body #intro #typeText #container {
+body #page #intro #welcomeContent #typeText #container {
   text-align: center;
   color: #FF00FF;
   margin: 0 0.5rem;
 }
 
-body #intro #typeText #container #text {
+body #page #intro #welcomeContent #typeText #container #text {
   display: inline-block;
   vertical-align: top;
   font-family: "Plus";
   color: #FF00FF;
 }
 
-body #about {
+body #page #about {
   padding: 10rem 3% 0 3%;
 }
 
-body #about .border {
+body #page #about .border {
   border: 0.2rem solid grey;
   padding: 3%;
   opacity: 0;
@@ -246,7 +262,7 @@ body #about .border {
   transition: 0.5s all ease-in-out;
 }
 
-body #about .border #titleAbout {
+body #page #about .border #titleAbout {
   font-family: "Plus";
   color: grey;
   font-size: 2.4rem;
@@ -254,7 +270,7 @@ body #about .border #titleAbout {
   margin-bottom: 4rem;
 }
 
-body #about .border .structureAbout {
+body #page #about .border .structureAbout {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -267,47 +283,47 @@ body #about .border .structureAbout {
   margin-bottom: 6rem;
 }
 
-body #about .border .structureAbout .videos video {
+body #page #about .border .structureAbout .videos video {
   float: right;
   width: 80%;
 }
 
-body #about .border .structureAbout .textAbout {
+body #page #about .border .structureAbout .textAbout {
   color: white;
   font-size: 1.7rem;
 }
 
-body #about .border .structureAbout .textAbout h3 {
+body #page #about .border .structureAbout .textAbout h3 {
   color: #E7FF00;
   font-size: 10rem;
   margin-bottom: 3rem;
 }
 
-body #about .border .structureAbout .textAbout p {
+body #page #about .border .structureAbout .textAbout p {
   text-align: justify;
   width: 80%;
 }
 
-body #about .border .structureAbout .textAbout p a {
+body #page #about .border .structureAbout .textAbout p a {
   color: #E7FF00;
   text-decoration: none;
 }
 
-body #about .borderOn {
+body #page #about .borderOn {
   opacity: 1;
   -webkit-transform: translateY(0rem);
           transform: translateY(0rem);
 }
 
-body #menu {
+body #page #menu {
   padding-top: 10rem;
 }
 
-body #menu #titleMenu {
+body #page #menu #titleMenu {
   overflow: hidden;
 }
 
-body #menu #titleMenu h2 {
+body #page #menu #titleMenu h2 {
   -webkit-animation: MoveSides 30s linear infinite;
           animation: MoveSides 30s linear infinite;
   color: grey;
@@ -316,7 +332,7 @@ body #menu #titleMenu h2 {
   margin-bottom: 4rem;
 }
 
-body #menu h3 {
+body #page #menu h3 {
   text-align: center;
   font-family: "Barista";
   font-size: 10rem;
@@ -324,14 +340,14 @@ body #menu h3 {
   color: #E7FF00;
 }
 
-body #menu #subtitleMenu {
+body #page #menu #subtitleMenu {
   text-align: center;
   color: white;
   font-size: 1.7rem;
   margin-bottom: 6rem;
 }
 
-body #menu .menuSeries {
+body #page #menu .menuSeries {
   opacity: 0;
   -webkit-transform: translatex(-14rem);
           transform: translatex(-14rem);
@@ -339,11 +355,11 @@ body #menu .menuSeries {
   transition: 0.5s all ease-in-out;
 }
 
-body #menu .menuSeries .serie {
+body #page #menu .menuSeries .serie {
   margin: 0 10% 8rem 10%;
 }
 
-body #menu .menuSeries .serie .titlePrice {
+body #page #menu .menuSeries .serie .titlePrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,15 +375,32 @@ body #menu .menuSeries .serie .titlePrice {
   margin-bottom: 3rem;
 }
 
-body #menu .menuSeries .serie .titlePrice h4 {
+body #page #menu .menuSeries .serie .titlePrice h4 {
   font-weight: normal;
 }
 
-body #menu .menuSeries .serie .titlePrice span {
+body #page #menu .menuSeries .serie .titlePrice #eth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #page #menu .menuSeries .serie .titlePrice #eth span {
   color: #FF00FF;
 }
 
-body #menu .menuSeries .serie .container {
+body #page #menu .menuSeries .serie .titlePrice #eth img {
+  width: 4.5rem;
+}
+
+body #page #menu .menuSeries .serie .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,7 +413,7 @@ body #menu .menuSeries .serie .container {
           justify-content: space-between;
 }
 
-body #menu .menuSeries .serie .container .box {
+body #page #menu .menuSeries .serie .container .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,13 +424,13 @@ body #menu .menuSeries .serie .container .box {
   position: relative;
 }
 
-body #menu .menuSeries .serie .container .box img {
+body #page #menu .menuSeries .serie .container .box img {
   width: 22rem;
   height: 22rem;
   margin-bottom: 1rem;
 }
 
-body #menu .menuSeries .serie .container .box a {
+body #page #menu .menuSeries .serie .container .box a {
   position: absolute;
   width: 18rem;
   height: 6rem;
@@ -410,42 +443,42 @@ body #menu .menuSeries .serie .container .box a {
   opacity: 0;
 }
 
-body #menu .menuSeries .serie .container .box a p {
+body #page #menu .menuSeries .serie .container .box a p {
   font-size: 1.7rem;
   color: #E7FF00;
   height: 6rem;
   line-height: 5.5rem;
 }
 
-body #menu .menuSeries .serie .container .box p {
+body #page #menu .menuSeries .serie .container .box p {
   color: white;
   font-size: 2.4rem;
 }
 
-body #menu .menuSeries .serie .container .box:hover img {
+body #page #menu .menuSeries .serie .container .box:hover img {
   opacity: 0.3;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-body #menu .menuSeries .serie .container .box:hover a {
+body #page #menu .menuSeries .serie .container .box:hover a {
   opacity: 1;
 }
 
-body #menu .menuSeriesOn {
+body #page #menu .menuSeriesOn {
   opacity: 1;
   -webkit-transform: translatex(0rem);
           transform: translatex(0rem);
 }
 
-body #creator {
+body #page #creator {
   padding: 10rem 3% 0 3%;
   background-color: black;
   background-position: center;
   background-size: 100% 100%;
 }
 
-body #creator .borderCreator {
+body #page #creator .borderCreator {
   border: 0.2rem solid grey;
   padding: 3%;
   opacity: 0;
@@ -455,7 +488,7 @@ body #creator .borderCreator {
   transition: 0.5s all ease-in-out;
 }
 
-body #creator .borderCreator #titleCreator {
+body #page #creator .borderCreator #titleCreator {
   font-family: "Plus";
   color: grey;
   font-size: 2.4rem;
@@ -463,7 +496,7 @@ body #creator .borderCreator #titleCreator {
   margin-bottom: 4rem;
 }
 
-body #creator .borderCreator .structureCreator {
+body #page #creator .borderCreator .structureCreator {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -479,13 +512,13 @@ body #creator .borderCreator .structureCreator {
   margin-bottom: 6rem;
 }
 
-body #creator .borderCreator .structureCreator .videos img {
+body #page #creator .borderCreator .structureCreator .videos img {
   float: left;
   width: 80%;
   border-radius: 100%;
 }
 
-body #creator .borderCreator .structureCreator .textCreator {
+body #page #creator .borderCreator .structureCreator .textCreator {
   color: white;
   font-size: 1.7rem;
   display: -webkit-box;
@@ -500,19 +533,19 @@ body #creator .borderCreator .structureCreator .textCreator {
           align-items: flex-end;
 }
 
-body #creator .borderCreator .structureCreator .textCreator h3 {
+body #page #creator .borderCreator .structureCreator .textCreator h3 {
   color: #E7FF00;
   font-size: 10rem;
   margin-bottom: 3rem;
 }
 
-body #creator .borderCreator .structureCreator .textCreator p {
+body #page #creator .borderCreator .structureCreator .textCreator p {
   text-align: justify;
   width: 80%;
   margin-bottom: 4rem;
 }
 
-body #creator .borderCreator .structureCreator #socialGon {
+body #page #creator .borderCreator .structureCreator #socialGon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,35 +557,35 @@ body #creator .borderCreator .structureCreator #socialGon {
           align-items: center;
 }
 
-body #creator .borderCreator .structureCreator #socialGon a {
+body #page #creator .borderCreator .structureCreator #socialGon a {
   margin: 0 1.5rem;
 }
 
-body #creator .borderCreator .structureCreator #socialGon #instagramGon {
+body #page #creator .borderCreator .structureCreator #socialGon #instagramGon {
   background: url(../logos/InstagramGon.svg) no-repeat;
   width: 1.7rem;
   height: 1.7rem;
 }
 
-body #creator .borderCreator .structureCreator #socialGon #behanceGon {
+body #page #creator .borderCreator .structureCreator #socialGon #behanceGon {
   background: url(../logos/BehanceGon.svg) no-repeat;
   width: 2.6rem;
   height: 1.7rem;
 }
 
-body #creator .borderCreator .structureCreator #socialGon #linkedInGon {
+body #page #creator .borderCreator .structureCreator #socialGon #linkedInGon {
   background: url(../logos/LinkedInGon.svg) no-repeat;
   width: 1.7rem;
   height: 1.7rem;
 }
 
-body #creator .borderCreatorOn {
+body #page #creator .borderCreatorOn {
   opacity: 1;
   -webkit-transform: translateY(0rem);
           transform: translateY(0rem);
 }
 
-body #contact {
+body #page #contact {
   background-color: #480072;
   text-align: center;
   color: white;
@@ -561,13 +594,13 @@ body #contact {
   height: 90vh;
 }
 
-body #contact #titleContact {
+body #page #contact #titleContact {
   color: grey;
   font-size: 2.4rem;
   margin-bottom: 7rem;
 }
 
-body #contact h3 {
+body #page #contact h3 {
   font-family: "Barista";
   font-size: 10rem;
   font-weight: normal;
@@ -575,7 +608,7 @@ body #contact h3 {
   margin-bottom: 2rem;
 }
 
-body #contact p {
+body #page #contact p {
   font-size: 1.7rem;
   margin-bottom: 6rem;
   width: 40%;
@@ -583,7 +616,7 @@ body #contact p {
   margin-bottom: 4rem;
 }
 
-body #contact #socialEnd {
+body #page #contact #socialEnd {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -596,50 +629,50 @@ body #contact #socialEnd {
   margin-bottom: 4rem;
 }
 
-body #contact #socialEnd a {
+body #page #contact #socialEnd a {
   margin: 0 1.5rem;
 }
 
-body #contact #socialEnd #instagramContact {
+body #page #contact #socialEnd #instagramContact {
   background: url(../logos/Instagram.svg) no-repeat;
   width: 2.4rem;
   height: 2.4rem;
 }
 
-body #contact #socialEnd #instagramContact #instagramContactHover {
+body #page #contact #socialEnd #instagramContact #instagramContactHover {
   opacity: 0;
   background: url(../logos/InstagramHover.svg) no-repeat;
   width: 2.4rem;
   height: 2.4rem;
 }
 
-body #contact #socialEnd #instagramContact:hover #instagramContactHover {
+body #page #contact #socialEnd #instagramContact:hover #instagramContactHover {
   opacity: 1;
 }
 
-body #contact #socialEnd #twitterContact {
+body #page #contact #socialEnd #twitterContact {
   background: url(../logos/Twitter.svg) no-repeat;
   width: 3rem;
   height: 2.4rem;
 }
 
-body #contact #socialEnd #twitterContact #twitterContactHover {
+body #page #contact #socialEnd #twitterContact #twitterContactHover {
   opacity: 0;
   background: url(../logos/TwitterHover.svg) no-repeat;
   width: 3rem;
   height: 2.4rem;
 }
 
-body #contact #socialEnd #twitterContact:hover #twitterContactHover {
+body #page #contact #socialEnd #twitterContact:hover #twitterContactHover {
   opacity: 1;
 }
 
-body #contact #mail {
+body #page #contact #mail {
   color: #E7FF00;
   font-size: 2.4rem;
 }
 
-body footer {
+body #page footer {
   color: grey;
   font-size: 1.7rem;
   text-align: center;
@@ -669,19 +702,19 @@ body footer {
 }
 
 @media (max-width: 1025px) {
-  body header .menu li a {
+  body #page header .menu li a {
     margin: 0 0.3rem;
   }
-  body header .menu #social a {
+  body #page header .menu #social a {
     margin: 0 1.2rem;
   }
 }
 
 @media (max-width: 769px) {
-  body header #logoPsychoPub img {
+  body #page header #logoPsychoPub img {
     height: 5rem;
   }
-  body header .menu {
+  body #page header .menu {
     position: fixed;
     -webkit-transform: translate(-100%);
             transform: translate(-100%);
@@ -707,93 +740,112 @@ body footer {
     padding-top: 3rem;
     margin-right: 0;
   }
-  body header .menu li a {
+  body #page header .menu li a {
     margin: auto;
     padding: 2rem 0;
   }
-  body header .menu #social {
+  body #page header .menu #social {
     margin-top: 17rem;
   }
-  body header .menu #social a {
+  body #page header .menu #social a {
     margin: 0 1.5rem;
   }
-  body header .menu #social #instagramHeader {
+  body #page header .menu #social #instagramHeader {
     width: 2.4rem;
     height: 2.4rem;
   }
-  body header .menu #social #instagramHeader #instagramHover {
+  body #page header .menu #social #instagramHeader #instagramHover {
     width: 2.4rem;
     height: 2.4rem;
   }
-  body header .menu #social #twitterHeader {
+  body #page header .menu #social #twitterHeader {
     width: 3rem;
     height: 2.4rem;
   }
-  body header .menu #social #twitterHeader #twitterHover {
+  body #page header .menu #social #twitterHeader #twitterHover {
     width: 3rem;
     height: 2.4rem;
   }
-  body header .hamburger {
+  body #page header .hamburger {
     display: inline;
   }
-  body header .showMenu {
+  body #page header .showMenu {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
 }
 
 @media (max-width: 1025px) {
-  body #intro {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-left: 0;
-    height: 100vh;
+  body #page #intro {
+    height: 100%;
   }
-  body #intro #welcome {
+  body #page #intro #backgroundIntro {
+    height: 100%;
+    overflow: hidden;
+  }
+  body #page #intro #welcomeContent {
+    top: 20%;
+  }
+  body #page #intro #welcomeContent #welcome {
     width: 60%;
     margin-bottom: 3rem;
   }
-  body #intro #typeText {
+  body #page #intro #welcomeContent #typeText {
     font-size: 2.4rem;
   }
 }
 
 @media (max-width: 769px) {
-  body #intro #welcome {
+  body #page #intro #backgroundIntro {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+  }
+  body #page #intro #backgroundIntro #videoIntro {
+    width: 140rem;
+  }
+  body #page #intro #welcomeContent {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 32%;
+    left: 0;
+  }
+  body #page #intro #welcomeContent #welcome {
     width: 90%;
   }
-  body #intro #typeText {
+  body #page #intro #welcomeContent #typeText {
     font-size: 1.7rem;
   }
 }
 
 @media (max-width: 1200px) {
-  body #about .border .structureAbout .textAbout h3 {
+  body #page #about .border .structureAbout .textAbout h3 {
     font-size: 5rem;
   }
 }
 
 @media (max-width: 1025px) {
-  body #about {
+  body #page #about {
     padding: 10% 3% 0 3%;
   }
-  body #about .border .structureAbout .textAbout h3 {
+  body #page #about .border .structureAbout .textAbout h3 {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 769px) {
-  body #about {
+  body #page #about {
     padding-top: 20%;
   }
-  body #about .border {
+  body #page #about .border {
     padding: 5%;
   }
-  body #about .border #titleAbout {
+  body #page #about .border #titleAbout {
     margin-bottom: 2rem;
   }
-  body #about .border .structureAbout {
+  body #page #about .border .structureAbout {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -806,13 +858,13 @@ body footer {
             align-items: center;
     margin-bottom: 0;
   }
-  body #about .border .structureAbout .videos video {
+  body #page #about .border .structureAbout .videos video {
     width: 100%;
   }
-  body #about .border .structureAbout .textAbout {
+  body #page #about .border .structureAbout .textAbout {
     text-align: center;
   }
-  body #about .border .structureAbout .textAbout p {
+  body #page #about .border .structureAbout .textAbout p {
     text-align: justify;
     width: 100%;
     margin-bottom: 5rem;
@@ -820,145 +872,151 @@ body footer {
 }
 
 @media (max-width: 1200px) {
-  body #menu h3 {
+  body #page #menu h3 {
     font-size: 8rem;
   }
-  body #menu .menuSeries .serie {
+  body #page #menu .menuSeries .serie {
     margin: 0 10% 5rem 10%;
   }
-  body #menu .menuSeries .serie .titlePrice {
+  body #page #menu .menuSeries .serie .titlePrice {
     font-size: 3rem;
   }
-  body #menu .menuSeries .serie .container .box img {
+  body #page #menu .menuSeries .serie .titlePrice #eth img {
+    width: 3.5rem;
+  }
+  body #page #menu .menuSeries .serie .container .box img {
     width: 16rem;
     height: 16rem;
   }
-  body #menu .menuSeries .serie .container .box a {
+  body #page #menu .menuSeries .serie .container .box a {
     width: 15rem;
     height: 5rem;
     top: 5.5rem;
     left: 0.5rem;
   }
-  body #menu .menuSeries .serie .container .box a p {
+  body #page #menu .menuSeries .serie .container .box a p {
     height: 5rem;
     line-height: 4.5rem;
   }
-  body #menu .menuSeries .serie .container .box p {
+  body #page #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
 
 @media (max-width: 1025px) {
-  body #menu {
+  body #page #menu {
     padding-top: 10%;
   }
-  body #menu h3 {
+  body #page #menu h3 {
     font-size: 5rem;
   }
-  body #menu .menuSeries .serie {
+  body #page #menu .menuSeries .serie {
     margin: 0 10% 2rem 10%;
   }
-  body #menu .menuSeries .serie .container .box img {
+  body #page #menu .menuSeries .serie .titlePrice #eth img {
+    width: 3rem;
+  }
+  body #page #menu .menuSeries .serie .container .box img {
     width: 12rem;
     height: 12rem;
   }
-  body #menu .menuSeries .serie .container .box a {
+  body #page #menu .menuSeries .serie .container .box a {
     width: 12rem;
     height: 4rem;
     top: 4rem;
     left: 0rem;
   }
-  body #menu .menuSeries .serie .container .box a p {
+  body #page #menu .menuSeries .serie .container .box a p {
     font-size: 1.2rem;
     height: 4rem;
     line-height: 3.5rem;
   }
-  body #menu .menuSeries .serie .container .box p {
+  body #page #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
 
 @media (max-width: 769px) {
-  body #menu {
+  body #page #menu {
     padding-top: 20%;
   }
-  body #menu h3 {
+  body #page #menu h3 {
     font-size: 3.8rem;
   }
-  body #menu #subtitleMenu {
+  body #page #menu #subtitleMenu {
     font-size: 1.7rem;
     margin: 0 10%;
     margin-bottom: 4rem;
   }
-  body #menu .menuSeries .serie {
+  body #page #menu .menuSeries .serie {
     margin: 0 10% 1rem 10%;
   }
-  body #menu .menuSeries .serie .titlePrice {
+  body #page #menu .menuSeries .serie .titlePrice {
     display: inline;
     font-size: 3rem;
   }
-  body #menu .menuSeries .serie .titlePrice span {
+  body #page #menu .menuSeries .serie .titlePrice span {
     font-size: 2.4rem;
   }
-  body #menu .menuSeries .serie .container {
+  body #page #menu .menuSeries .serie .container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
     margin-top: 3rem;
   }
-  body #menu .menuSeries .serie .container .box {
+  body #page #menu .menuSeries .serie .container .box {
     display: inline-block;
     border: 1px solid grey;
     margin-bottom: 2rem;
   }
-  body #menu .menuSeries .serie .container .box img {
+  body #page #menu .menuSeries .serie .container .box img {
     width: 15.5rem;
     height: 15.5rem;
     margin-bottom: 0rem;
   }
-  body #menu .menuSeries .serie .container .box a {
+  body #page #menu .menuSeries .serie .container .box a {
     width: 11rem;
     height: 4rem;
     top: 5.75rem;
     left: 2.25rem;
   }
-  body #menu .menuSeries .serie .container .box a p {
+  body #page #menu .menuSeries .serie .container .box a p {
     font-size: 1.2rem;
     height: 4rem;
     line-height: 3.5rem;
   }
-  body #menu .menuSeries .serie .container .box p {
+  body #page #menu .menuSeries .serie .container .box p {
     font-size: 1.7rem;
   }
 }
 
 @media (max-width: 1200px) {
-  body #creator .borderCreator .structureCreator .textCreator h3 {
+  body #page #creator .borderCreator .structureCreator .textCreator h3 {
     font-size: 5rem;
   }
 }
 
 @media (max-width: 1025px) {
-  body #creator {
+  body #page #creator {
     padding: 10% 3% 0 3%;
   }
-  body #creator .borderCreator .structureCreator .textCreator h3 {
+  body #page #creator .borderCreator .structureCreator .textCreator h3 {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 769px) {
-  body #creator {
+  body #page #creator {
     padding-top: 20%;
   }
-  body #creator .borderCreator {
+  body #page #creator .borderCreator {
     padding: 5%;
   }
-  body #creator .borderCreator #titleCreator {
+  body #page #creator .borderCreator #titleCreator {
     margin-bottom: 2rem;
   }
-  body #creator .borderCreator .structureCreator {
+  body #page #creator .borderCreator .structureCreator {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -968,11 +1026,11 @@ body footer {
             flex-direction: column-reverse;
     margin-bottom: 0;
   }
-  body #creator .borderCreator .structureCreator .videos img {
+  body #page #creator .borderCreator .structureCreator .videos img {
     width: 100%;
     margin-bottom: 3rem;
   }
-  body #creator .borderCreator .structureCreator .textCreator {
+  body #page #creator .borderCreator .structureCreator .textCreator {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -981,54 +1039,54 @@ body footer {
             align-items: center;
     text-align: center;
   }
-  body #creator .borderCreator .structureCreator .textCreator p {
+  body #page #creator .borderCreator .structureCreator .textCreator p {
     text-align: justify;
     width: 100%;
     margin-bottom: 4rem;
   }
-  body #creator .borderCreator .structureCreator .textCreator #socialGon {
+  body #page #creator .borderCreator .structureCreator .textCreator #socialGon {
     margin-bottom: 2rem;
   }
-  body #creator .borderCreator .structureCreator .textCreator #socialGon a {
+  body #page #creator .borderCreator .structureCreator .textCreator #socialGon a {
     margin: 0 1.5rem;
   }
-  body #creator .borderCreator .structureCreator .textCreator #socialGon #instagramGon {
+  body #page #creator .borderCreator .structureCreator .textCreator #socialGon #instagramGon {
     width: 2.4rem;
     height: 2.4rem;
   }
-  body #creator .borderCreator .structureCreator .textCreator #socialGon #behanceGon {
+  body #page #creator .borderCreator .structureCreator .textCreator #socialGon #behanceGon {
     width: 3.8rem;
     height: 2.4rem;
   }
-  body #creator .borderCreator .structureCreator .textCreator #socialGon #linkedInGon {
+  body #page #creator .borderCreator .structureCreator .textCreator #socialGon #linkedInGon {
     width: 2.4rem;
     height: 2.4rem;
   }
 }
 
 @media (max-width: 1200px) {
-  body #contact h3 {
+  body #page #contact h3 {
     font-size: 8rem;
   }
 }
 
 @media (max-width: 1025px) {
-  body #contact h3 {
+  body #page #contact h3 {
     font-size: 5rem;
   }
-  body #contact p {
+  body #page #contact p {
     width: 50%;
   }
 }
 
 @media (max-width: 769px) {
-  body #contact {
+  body #page #contact {
     padding-top: 20%;
   }
-  body #contact h3 {
+  body #page #contact h3 {
     font-size: 3.8rem;
   }
-  body #contact p {
+  body #page #contact p {
     width: 80%;
     text-align: center;
   }
