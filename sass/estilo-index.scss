@@ -30,7 +30,6 @@ $xxlarge: 10rem;
 
 body {
     background-color: black;
-
     #loader {
         position: fixed;
         background-color: black;
@@ -44,13 +43,11 @@ body {
         animation: spin 1s linear infinite;
         z-index: 100;
     }
-
     @keyframes spin {
         100% {
             transform: rotate(360deg);
         }
     }
-      
     .center {
         position: absolute;
         top: 0;
@@ -61,7 +58,7 @@ body {
     }
 
     #page {
-        display: none;
+        // display: none;
 //------------------------------------------------HEADER------------------------------------------------
     header {
         height: 8rem;
@@ -166,58 +163,41 @@ body {
     }
 
 //------------------------------------------------INTRO------------------------------------------------
-    #intro {
-        width: 100%;
-        height: 110vh;
-
-        #backgroundIntro {
-            height: 110vh;
-            overflow: hidden;
-
-            #videoIntro {
-                width: 100%;
-                opacity: 0.8;
-                align-items: center;
-            }
-        }
-
-        #welcomeContent {
-            position: absolute;
-            top: 17rem;
-            left: 10%;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            #welcome {
-                width: 60rem;
-                margin-bottom: 4rem;
-            }
-    
-            #typeText {
-                display: flex;
-                align-items: center;
-                color: $green;
-                font-size: $large;
-                background-color: rgba(0, 0, 0, 0.7);
-                padding: 0 1rem;
-    
-                #container {
-                    text-align: center;
-                    color: $pink;
-                    margin: 0 0.5rem;
-    
-                    #text {
-                        display: inline-block;
-                        vertical-align: top;
-                        font-family: "Plus";
-                        color: $pink;
-                    }
-                }
+#intro {
+    background-image: url(../images/Intro.png);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10%;
+    #welcome {
+        width: 60rem;
+        margin-bottom: 4rem;
+    }
+    #typeText {
+        display: flex;
+        align-items: center;
+        color: $green;
+        font-size: $large;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 0 1rem;
+        #container {
+            text-align: center;
+            color: $pink;
+            margin: 0 0.5rem;
+            #text {
+                display: inline-block;
+                vertical-align: top;
+                font-family: "Plus";
+                color: $pink;
             }
         }
     }
+}
 
 //------------------------------------------------ABOUT------------------------------------------------
     #about {
@@ -715,24 +695,17 @@ body {
     body{
         #page {
             #intro {
-                height: 100%;
+                align-items: center;
+                padding-left: 0;
+                height: 100vh;
 
-                #backgroundIntro {
-                    height: 100%;
-                    overflow: hidden;
+                #welcome {
+                    width: 60%;
+                    margin-bottom: 3rem;
                 }
-            
-                #welcomeContent {
-                    top: 20%;
-            
-                    #welcome {
-                        width: 60%;
-                        margin-bottom: 3rem;
-                    }
-            
-                    #typeText {
-                        font-size: $medium;
-                    }
+
+                #typeText {
+                    font-size: $medium;
                 }
             }
         }
@@ -743,28 +716,12 @@ body {
     body{
         #page {
             #intro {
-
-                #backgroundIntro {
-                    justify-content: center;
-                    margin: auto;
-
-                    #videoIntro {
-                        width: 140rem;
-                    }
+                #welcome {
+                    width: 90%;
                 }
 
-                #welcomeContent {
-                    align-items: center;
-                    top: 32%;
-                    left: 0;
-
-                    #welcome {
-                        width: 90%;
-                    }
-
-                    #typeText {
-                        font-size: $small;
-                    }
+                #typeText {
+                    font-size: $small;
                 }
             }
         }

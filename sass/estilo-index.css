@@ -66,10 +66,6 @@ body .center {
   margin: auto;
 }
 
-body #page {
-  display: none;
-}
-
 body #page header {
   height: 8rem;
   width: 100%;
@@ -183,28 +179,11 @@ body #page header .hamburger .closeIcon {
 }
 
 body #page #intro {
+  background-image: url(../images/Intro.png);
+  background-size: cover;
+  background-position: center center;
   width: 100%;
   height: 110vh;
-}
-
-body #page #intro #backgroundIntro {
-  height: 110vh;
-  overflow: hidden;
-}
-
-body #page #intro #backgroundIntro #videoIntro {
-  width: 100%;
-  opacity: 0.8;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #page #intro #welcomeContent {
-  position: absolute;
-  top: 17rem;
-  left: 10%;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,14 +194,18 @@ body #page #intro #welcomeContent {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 10%;
 }
 
-body #page #intro #welcomeContent #welcome {
+body #page #intro #welcome {
   width: 60rem;
   margin-bottom: 4rem;
 }
 
-body #page #intro #welcomeContent #typeText {
+body #page #intro #typeText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,13 +218,13 @@ body #page #intro #welcomeContent #typeText {
   padding: 0 1rem;
 }
 
-body #page #intro #welcomeContent #typeText #container {
+body #page #intro #typeText #container {
   text-align: center;
   color: #FF00FF;
   margin: 0 0.5rem;
 }
 
-body #page #intro #welcomeContent #typeText #container #text {
+body #page #intro #typeText #container #text {
   display: inline-block;
   vertical-align: top;
   font-family: "Plus";
@@ -777,45 +760,26 @@ body #page footer {
 
 @media (max-width: 1025px) {
   body #page #intro {
-    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0;
+    height: 100vh;
   }
-  body #page #intro #backgroundIntro {
-    height: 100%;
-    overflow: hidden;
-  }
-  body #page #intro #welcomeContent {
-    top: 20%;
-  }
-  body #page #intro #welcomeContent #welcome {
+  body #page #intro #welcome {
     width: 60%;
     margin-bottom: 3rem;
   }
-  body #page #intro #welcomeContent #typeText {
+  body #page #intro #typeText {
     font-size: 2.4rem;
   }
 }
 
 @media (max-width: 769px) {
-  body #page #intro #backgroundIntro {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: auto;
-  }
-  body #page #intro #backgroundIntro #videoIntro {
-    width: 140rem;
-  }
-  body #page #intro #welcomeContent {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    top: 32%;
-    left: 0;
-  }
-  body #page #intro #welcomeContent #welcome {
+  body #page #intro #welcome {
     width: 90%;
   }
-  body #page #intro #welcomeContent #typeText {
+  body #page #intro #typeText {
     font-size: 1.7rem;
   }
 }
