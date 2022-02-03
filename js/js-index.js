@@ -186,8 +186,8 @@ window.addEventListener('scroll', () => scrollAppear("borderCreator", "borderCre
 
 //--------------------------------------------------SHOW WHEN LOADED-------------------------------------------------- 
 function fade () {
-	$('#loader').delay(5000).fadeOut();
-	$('#page').delay(5000).fadeIn();
+	$('#loader').delay(7000).fadeOut();
+	$('#page').delay(7000).fadeIn();
 }
 
 fade ();
