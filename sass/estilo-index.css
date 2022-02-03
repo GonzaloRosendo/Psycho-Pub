@@ -66,6 +66,10 @@ body .center {
   margin: auto;
 }
 
+body #page {
+  display: none;
+}
+
 body #page header {
   height: 8rem;
   width: 100%;
