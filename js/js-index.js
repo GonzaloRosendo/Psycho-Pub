@@ -185,10 +185,19 @@ window.addEventListener('scroll', () => scrollAppear("menuSeries", "menuSeriesPo
 window.addEventListener('scroll', () => scrollAppear("borderCreator", "borderCreatorPos", "borderCreatorOn"));
 
 //--------------------------------------------------SHOW WHEN LOADED-------------------------------------------------- 
-function fade () {
-	$('#loader').delay(7000).fadeOut();
-	$('#page').delay(7000).fadeIn();
-}
+// function fade () {
+// 	$('#loader').delay(7000).fadeOut();
+// 	$('#page').delay(7000).fadeIn();
+// }
 
-fade ();
+// fade ();
 
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("#page").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+    } else {
+		document.querySelector("#page").style.visibility = "visible";
+        document.querySelector("#loader").style.display = "none";
+    }
+};
